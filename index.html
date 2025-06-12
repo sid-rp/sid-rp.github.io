@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Your Name</title>
+    <title>Portfolio | Sidhartha Reddy Potu</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js" defer></script>
@@ -12,15 +12,18 @@
     <header>
         <div class="container">
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                </ul>
-                <button id="theme-toggle" aria-label="Toggle dark/light mode">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </button>
+                <div class="logo">Sid</div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                    </ul>
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -28,27 +31,35 @@
     <main>
         <section id="about" class="section">
             <div class="container">
-                <h1>Your Name</h1>
+                <h1>Sidhartha Reddy Potu</h1>
                 <div class="profile-container">
                     <div class="profile-image">
-                        <img src="images/sid.jpeg" alt="Your Profile Picture">
+                        <img src="images/sid.jpeg" alt="Your Profile Picture" class="circle-img">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" class="social-link">
+                                <i class="fas fa-file-pdf"></i>
+                            </a>
+                            <a href="mailto:sp7835@nyu.edu" aria-label="Email" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="profile-content">
                         <p class="summary">
-                            Hello there! Write your introduction here. This is where you can share a bit about yourself,
-                            your background, education, and what you're passionate about.
+                            Hello there! I'm a Master's student in Computer Science at New York University's Tandon School of Engineering, with a strong background in Computer Vision, Machine Learning, and Software Development.
                         </p>
-                        <div class="social-links">
-                            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
-                        </div>
+                        <p class="summary">
+                            I'm currently working as a Graduate Student Researcher at NYU's CILVR lab under Prof. David Fouhey, focusing on 3D Computer Vision. I'm also a Course Assistant for several advanced courses including Learning with Large Language and Vision Models, Deep Learning, and Advanced Topics in Computer Vision.
+                        </p>
+                        <p class="summary">
+                            I completed my Bachelor of Technology in Electrical Engineering with a minor in Astronomy from the Indian Institute of Technology (IIT), Indore.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -57,34 +68,40 @@
         <section id="projects" class="section">
             <div class="container">
                 <h2>Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
+                <div class="project-grid">
+                    <!-- Point Tracking Project -->
                     <div class="project-card">
-                        <h3>Project Title 1</h3>
-                        <p>Brief description of the project and what technologies were used.</p>
+                        <h3>Point Tracking in Egocentric Videos</h3>
+                        <p>Adapted DINOv2 and CroCoV2 backbones for point tracking in egocentric videos. Evaluated on the EgoPoints benchmark, reporting tracking accuracy at 8 pix, 16 pix, and 24 pix thresholds.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://github.com/sid-rp/ego_point_trackig" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
+                    
+                    <!-- Medical QA Models Project -->
                     <div class="project-card">
-                        <h3>Project Title 2</h3>
-                        <p>Brief description of the project and what technologies were used.</p>
+                        <h3>Fine-Tuning Medical QA Models</h3>
+                        <p>Optimized Meta LLaMA 3.2 3B for medical QA using LoRA, QLoRA, and GaLore. Achieved best USMLE accuracies: Step 1 - 42% (GaLore), Step 2 - 38% (QLoRA), Step 3 - 45% (GaLore). Improved MedQuAD F1 scores to 70% (QLoRA) and 69% (GaLore) with efficient fine-tuning.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://github.com/sid-rp/medllama" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
-
-                    <!-- Project 3 -->
+                    
+                    <!-- VioletPass Project -->
                     <div class="project-card">
-                        <h3>Project Title 3</h3>
-                        <p>Brief description of the project and what technologies were used.</p>
+                        <h3>VioletPass: Ticket Booking Platform</h3>
+                        <p>Designed a robust, scalable ticket booking platform on AWS to prevent double booking. Implemented Redis distributed locks with TTL for seat reservations and PostgreSQL for finalization. Integrated QR code-based authentication for secure and efficient event check-ins.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://github.com/Stuti-mishra/VioletPass" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                    
+                    <!-- AnimeVerse Project -->
+                    <div class="project-card">
+                        <h3>AnimeVerse - Recommendation</h3>
+                        <p>Developed a personalized anime recommendation system, analyzing broadcast types, genres, and anime scores. Analyzed 300k user-anime interactions with PySpark and trained ALS, TF-IDF, and ChromaDB models.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/sid-rp/AnimeVerse" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -93,27 +110,54 @@
 
         <section id="experience" class="section">
             <div class="container">
-                <h2>Experience</h2>
-                
-                <!-- Experience 1 -->
-                <div class="experience-item">
-                    <h3>Company Name 1</h3>
-                    <p class="position">Position Title | Date Range</p>
-                    <p>Description of your responsibilities and achievements in this role.</p>
-                </div>
+                <div class="experience-grid">
+                    <!-- Experience 1 -->
+                    <div class="experience-item">
+                        <h3>Graduate Student Researcher, CILVR, NYU</h3>
+                        <h4>3D Computer Vision under Prof. David Fouhey</h4>
+                        <p class="experience-date">January 2024 - Present</p>
+                        <ul>
+                            <li>Incorporated Colmap SfM and HaMeR transformer to get global 3D trajectories for EgoExo4D and Epic-Kitchens</li>
+                            <li>Implemented temporal smoothing, minimized velocity and jerk for stable hand motion in egocentric videos</li>
+                            <li>Developed visualization workflows with Rerun Viewer and scaled experiments on NYU HPC using SLURM</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="experience-item">
+                        <h3>Course Assistant, NYU</h3>
+                        <h4>Computer Vision, ML courses</h4>
+                        <p class="experience-date">September 2024 - May 2025</p>
+                        <ul>
+                            <li>Adviced 50+ students in Learning with Large Language and Vision Models (Courant) under Prof. Saining Xie</li>
+                            <li>Mentored 400+ students in Deep Learning (Tandon) under Prof. Chinmay Hegde</li>
+                            <li>Managed 50+ students in Advanced Topics in Computer Vision (Tandon) under Prof. David Fouhey</li>
+                        </ul>
+                    </div>
 
-                <!-- Experience 2 -->
-                <div class="experience-item">
-                    <h3>Company Name 2</h3>
-                    <p class="position">Position Title | Date Range</p>
-                    <p>Description of your responsibilities and achievements in this role.</p>
-                </div>
+                    <!-- Experience 3 -->
+                    <div class="experience-item">
+                        <h3>B.Tech Thesis, PRIA Lab, IIT Indore</h3>
+                        <h4>Multimodal Crowd Counting using Vision Transformers</h4>
+                        <p class="experience-date">June 2022 - December 2022</p>
+                        <ul>
+                            <li>Proposed a novel vision transformer-based approach for crowd counting after an in-depth review of 30+ papers</li>
+                            <li>Trained a ViT based model in weakly supervised setting, achieving MAE 15.78 and MSE 30.70</li>
+                            <li>Created a Pyramid Vision Transformer (PVT v2) model, achieving MAE 19.218 and MSE 32.940</li>
+                            <li>Ranked top 10 of 250+ B.Tech theses; nominated for Best Thesis award at IIT Indore</li>
+                        </ul>
+                    </div>
 
-                <!-- Experience 3 -->
-                <div class="experience-item">
-                    <h3>Company Name 3</h3>
-                    <p class="position">Position Title | Date Range</p>
-                    <p>Description of your responsibilities and achievements in this role.</p>
+                    <!-- Experience 4 -->
+                    <div class="experience-item">
+                        <h3>Research Assistant, NLP Lab, IIT Indore</h3>
+                        <h4>Multi-Modal Hashtag Recommendation</h4>
+                        <p class="experience-date">October 2021 - April 2022</p>
+                        <ul>
+                            <li>Modeled hashtag generation for micro-videos using LSTMs with self-, co-, and hierarchical attention</li>
+                            <li>Enhanced feature fusion with BERT, Word2Vec, ResNet152, InceptionV3, VGG16, MFCCs, and spectrograms</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
