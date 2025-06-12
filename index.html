@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h1>Your Name</h1>
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="images/sid.jpeg" alt="Your Profile Picture">
+                    </div>
+                    <div class="profile-content">
+                        <p class="summary">
+                            Hello there! Write your introduction here. This is where you can share a bit about yourself,
+                            your background, education, and what you're passionate about.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                                <i class="fas fa-file-pdf"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <h3>Project Title 1</h3>
+                        <p>Brief description of the project and what technologies were used.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <h3>Project Title 2</h3>
+                        <p>Brief description of the project and what technologies were used.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <h3>Project Title 3</h3>
+                        <p>Brief description of the project and what technologies were used.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Experience</h2>
+                
+                <!-- Experience 1 -->
+                <div class="experience-item">
+                    <h3>Company Name 1</h3>
+                    <p class="position">Position Title | Date Range</p>
+                    <p>Description of your responsibilities and achievements in this role.</p>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-item">
+                    <h3>Company Name 2</h3>
+                    <p class="position">Position Title | Date Range</p>
+                    <p>Description of your responsibilities and achievements in this role.</p>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-item">
+                    <h3>Company Name 3</h3>
+                    <p class="position">Position Title | Date Range</p>
+                    <p>Description of your responsibilities and achievements in this role.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
