@@ -1,6 +1,9 @@
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navRight = document.querySelector('.nav-right');
+    const navLinks = document.querySelectorAll('nav ul li a');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
     // Check for saved theme preference or use device preference
@@ -18,6 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // Save preference to localStorage
         const isDarkTheme = document.body.classList.contains('dark-theme');
         localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+    });
+    
+    // Mobile menu toggle functionality
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('hamburger-active');
+        navRight.classList.toggle('active');
+        document.body.classList.toggle('no-scroll'); // Prevent scrolling when menu is open
+    });
+    
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navRight.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('hamburger-active');
+                navRight.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        });
     });
     
     // Update current year in footer

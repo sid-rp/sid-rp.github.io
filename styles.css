@@ -68,6 +68,11 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Prevent scrolling when mobile menu is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -138,6 +143,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    position: relative;
 }
 
 .logo {
@@ -145,6 +151,63 @@ nav {
     font-weight: 700;
     color: var(--heading-color);
     letter-spacing: 1px;
+    z-index: 1002; /* Above the mobile menu */
+}
+
+/* Hamburger Menu */
+#mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1002;
+}
+
+.hamburger-icon {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 20px;
+}
+
+.bar {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+}
+
+.bar:nth-child(1) {
+    top: 0px;
+}
+
+.bar:nth-child(2) {
+    top: 8px;
+}
+
+.bar:nth-child(3) {
+    top: 16px;
+}
+
+.hamburger-active .bar:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.hamburger-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-active .bar:nth-child(3) {
+    top: 8px;
+    transform: rotate(-45deg);
 }
 
 .nav-right {
@@ -601,38 +664,52 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    /* Improved mobile navbar */
+    /* Mobile navbar with hamburger */
+    #mobile-menu-toggle {
+        display: block;
+    }
+    
     nav {
-        flex-direction: column;
         padding: 1rem 0;
-        align-items: center;
     }
     
     .nav-right {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        justify-content: center;
+        height: 100vh;
+        background-color: var(--nav-bg);
         flex-direction: column;
-        margin-top: 1rem;
-        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1001;
+    }
+    
+    .nav-right.active {
+        transform: translateY(0);
     }
     
     nav ul {
+        flex-direction: column;
         margin-right: 0;
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
     }
     
     nav li {
-        margin: 0.5rem;
+        margin: 1rem 0;
+        text-align: center;
     }
     
-    .logo {
-        margin-bottom: 0.5rem;
-        font-size: 1.8rem;
+    nav a {
+        font-size: 1.2rem;
     }
     
     #theme-toggle {
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
     
     /* Make experience section single column for all screen sizes */
