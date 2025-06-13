@@ -18,6 +18,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
                     </ul>
                     <button id="theme-toggle" aria-label="Toggle dark/light mode">
                         <i class="fas fa-moon"></i>
@@ -31,10 +32,13 @@
     <main>
         <section id="about" class="section">
             <div class="container">
-                <h1>Sidhartha Reddy Potu</h1>
+                <!-- About heading removed as requested -->
+                <h1 class="name-heading">Sidhartha Reddy Potu</h1>
                 <div class="profile-container">
-                    <div class="profile-image">
-                        <img src="images/sid.jpeg" alt="Your Profile Picture" class="circle-img">
+                    <div class="profile-column">
+                        <div class="profile-image">
+                            <img src="images/sid.jpg" alt="Sidhartha Reddy Potu">
+                        </div>
                         <div class="social-links">
                             <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
                                 <i class="fab fa-linkedin"></i>
@@ -42,7 +46,7 @@
                             <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" class="social-link">
+                            <a href="SidharthaReddyPotu_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" class="social-link">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <a href="mailto:sp7835@nyu.edu" aria-label="Email" class="social-link">
@@ -52,14 +56,15 @@
                     </div>
                     <div class="profile-content">
                         <p class="summary">
-                            Hello there! I'm a Master's student in Computer Science at New York University's Tandon School of Engineering, with a strong background in Computer Vision, Machine Learning, and Software Development.
+                          Hello there! I graduated with a Master of Science in Computer Science from <a href="https://engineering.nyu.edu/" target="_blank">New York University's Tandon School of Engineering</a>, with a strong background in Computer Vision, Machine Learning, and Software Development.
                         </p>
                         <p class="summary">
-                            I'm currently working as a Graduate Student Researcher at NYU's CILVR lab under Prof. David Fouhey, focusing on 3D Computer Vision. I'm also a Course Assistant for several advanced courses including Learning with Large Language and Vision Models, Deep Learning, and Advanced Topics in Computer Vision.
+                          I’m currently a Graduate Student Researcher at NYU's <a href="https://wp.nyu.edu/cilvr/" target="_blank">CILVR lab</a> under <a href="https://cs.nyu.edu/~fouhey/" target="_blank">Prof. David Fouhey</a>, focusing on 3D computer vision. I previously served as a Course Assistant for advanced graduate courses including <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank">Learning with Large Language and Vision Models</a> under <a href="https://www.sainingxie.com/" target="_blank">Prof. Saining Xie</a>, Deep Learning, and Advanced Topics in Computer Vision.
                         </p>
                         <p class="summary">
-                            I completed my Bachelor of Technology in Electrical Engineering with a minor in Astronomy from the Indian Institute of Technology (IIT), Indore.
+                          I completed my Bachelor of Technology in Electrical Engineering with a minor in Astronomy at the <a href="https://www.iiti.ac.in/" target="_blank">Indian Institute of Technology (IIT), Indore</a>.
                         </p>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -104,6 +109,15 @@
                             <a href="https://github.com/sid-rp/AnimeVerse" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
+                    
+                    <!-- Image Captioning Project -->
+                    <div class="project-card">
+                        <h3>Image Captioning/Video Summarizer</h3>
+                        <p>Built ResNet-GRU encoder-decoder with attention for image captioning plus T5 transformer for video summarization.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/sid-rp/ML8-ImageCaptioning" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -129,9 +143,9 @@
                         <h4>Computer Vision, ML courses</h4>
                         <p class="experience-date">September 2024 - May 2025</p>
                         <ul>
-                            <li>Adviced 50+ students in Learning with Large Language and Vision Models (Courant) under Prof. Saining Xie</li>
-                            <li>Mentored 400+ students in Deep Learning (Tandon) under Prof. Chinmay Hegde</li>
-                            <li>Managed 50+ students in Advanced Topics in Computer Vision (Tandon) under Prof. David Fouhey</li>
+                            <li>Advised 50+ students in <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank">Learning with Large Language and Vision Models</a> (Courant) under <a href="https://www.sainingxie.com/" target="_blank">Prof. Saining Xie</a></li>
+                            <li>Mentored 400+ students in Deep Learning (Tandon) under <a href="https://chinmayhegde.github.io/" target="_blank">Prof. Chinmay Hegde</a></li>
+                            <li>Managed 50+ students in Advanced Topics in Computer Vision (Tandon) under <a href="https://cs.nyu.edu/~fouhey/" target="_blank">Prof. David Fouhey</a></li>
                         </ul>
                     </div>
 
@@ -161,11 +175,57 @@
                 </div>
             </div>
         </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-grid">
+                    <!-- NYU Education -->
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>New York University</h3>
+                            <h4>Master of Science in Computer Science</h4>
+                            <p class="education-date">2023 - 2025</p>
+                            <p>Course Work: Machine Learning, Operating Systems, Computer Vision, AI, Natural Language Processing with Representation Learning, Embodied Learning and Vision, Cloud Computing, Big Data .</p>
+                        </div>
+                    </div>
+
+                    <!-- IIT Education -->
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Indian Institute of Technology (IIT), Indore</h3>
+                            <h4>Bachelor of Technology in Electrical Engineering</h4>
+                            <p class="education-date">2019 - 2023</p>
+                            <p>Minor in Astronomy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Sidhartha Reddy Potu</p>
+                <div class="footer-social">
+                    <a href="mailto:sp7835@nyu.edu" aria-label="Email" class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
