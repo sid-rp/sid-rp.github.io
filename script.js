@@ -222,3 +222,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 });
+
+// Back to Top Button functionality
+function initializeBackToTop() {
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    if (!backToTopButton) return;
+    
+    // Show/hide button based on scroll position
+    function toggleBackToTopButton() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    }
+    
+    // Smooth scroll to top
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Event listeners
+    window.addEventListener('scroll', toggleBackToTopButton);
+    backToTopButton.addEventListener('click', scrollToTop);
+    
+    // Keyboard accessibility
+    backToTopButton.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            scrollToTop();
+        }
+    });
+}
+
+// Initialize back to top functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeBackToTop();
+});
