@@ -40,7 +40,6 @@
         <section id="about" class="section">
             <div class="container">
                 <!-- About heading removed as requested -->
-                <h1 class="name-heading">Sidhartha Reddy Potu</h1>
                 <div class="profile-container">
                     <div class="profile-column">
                         <div class="profile-image">
@@ -62,6 +61,11 @@
                         </div>
                     </div>
                     <div class="profile-content">
+                        <h1 class="name-heading">Sidhartha Reddy Potu</h1>
+                        <div class="typing-container">
+                            <span class="typed-text"></span>
+                            <span class="cursor"></span>
+                        </div>
                         <p class="summary">
                           Hello there! I graduated with a Master of Science in Computer Science from
                           <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">
@@ -160,9 +164,14 @@
 
         <section id="experience" class="section">
             <div class="container">
-                <div class="experience-grid">
-                    <!-- Experience 1 -->
-                    <div class="experience-item">
+                <h2>Experience</h2>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="experience-timeline">
+                        <!-- Experience 1 -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
                         <h3>Graduate Student Researcher, CILVR, NYU</h3>
                         <h4>3D Computer Vision under Prof. David Fouhey</h4>
                         <p class="experience-date">January 2024 - Present</p>
@@ -171,10 +180,13 @@
                             <li>Implemented temporal smoothing, minimized velocity and jerk for stable hand motion in egocentric videos</li>
                             <li>Developed visualization workflows with Rerun Viewer and scaled experiments on NYU HPC using SLURM</li>
                         </ul>
-                    </div>
-                    
-                    <!-- Experience 2 -->
-                    <div class="experience-item">
+                            </div>
+                        </div>
+                        
+                        <!-- Experience 2 -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
                         <h3>Course Assistant, NYU</h3>
                         <h4>Computer Vision, ML courses</h4>
                         <p class="experience-date">September 2024 - May 2025</p>
@@ -183,10 +195,13 @@
                             <li>Mentored 400+ students in Deep Learning (Tandon) under <a href="https://chinmayhegde.github.io/" target="_blank">Prof. Chinmay Hegde</a></li>
                             <li>Managed 50+ students in Advanced Topics in Computer Vision (Tandon) under <a href="https://cs.nyu.edu/~fouhey/" target="_blank">Prof. David Fouhey</a></li>
                         </ul>
-                    </div>
+                            </div>
+                        </div>
 
-                    <!-- Experience 3 -->
-                    <div class="experience-item">
+                        <!-- Experience 3 -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
                         <h3>B.Tech Thesis, PRIA Lab, IIT Indore</h3>
                         <h4>Multimodal Crowd Counting using Vision Transformers</h4>
                         <p class="experience-date">June 2022 - December 2022</p>
@@ -196,10 +211,13 @@
                             <li>Created a Pyramid Vision Transformer (PVT v2) model, achieving MAE 19.218 and MSE 32.940</li>
                             <li>Ranked top 10 of 250+ B.Tech theses; nominated for Best Thesis award at IIT Indore</li>
                         </ul>
-                    </div>
+                            </div>
+                        </div>
 
-                    <!-- Experience 4 -->
-                    <div class="experience-item">
+                        <!-- Experience 4 -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
                         <h3>Research Assistant, NLP Lab, IIT Indore</h3>
                         <h4>Multi-Modal Hashtag Recommendation</h4>
                         <p class="experience-date">October 2021 - April 2022</p>
@@ -207,6 +225,8 @@
                             <li>Modeled hashtag generation for micro-videos using LSTMs with self-, co-, and hierarchical attention</li>
                             <li>Enhanced feature fusion with BERT, Word2Vec, ResNet152, InceptionV3, VGG16, MFCCs, and spectrograms</li>
                         </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

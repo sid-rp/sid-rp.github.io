@@ -85,3 +85,140 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Animated Timeline functionality
+function initializeTimelineAnimation() {
+    const timelineLine = document.querySelector('.timeline-line');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    if (!timelineLine || timelineItems.length === 0) return;
+    
+    // Create intersection observer for timeline line
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    // Create intersection observer for timeline items
+    const itemsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add a small delay for staggered animation
+                const index = Array.from(timelineItems).indexOf(entry.target);
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, index * 200); // 200ms delay between each item
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe timeline line
+    timelineObserver.observe(timelineLine);
+    
+    // Observe each timeline item
+    timelineItems.forEach(item => {
+        itemsObserver.observe(item);
+    });
+}
+
+// Initialize timeline animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeTimelineAnimation();
+});
+
+// Dynamic Typing Animation
+class TypingAnimation {
+    constructor(element, texts, typeSpeed = 100, backSpeed = 50, backDelay = 2000) {
+        this.element = element;
+        this.texts = texts;
+        this.typeSpeed = typeSpeed;
+        this.backSpeed = backSpeed;
+        this.backDelay = backDelay;
+        this.textIndex = 0;
+        this.charIndex = 0;
+        this.isDeleting = false;
+        this.cursor = document.querySelector('.cursor');
+        
+        this.type();
+    }
+    
+    type() {
+        const currentText = this.texts[this.textIndex];
+        
+        if (this.isDeleting) {
+            // Deleting characters
+            this.element.textContent = currentText.substring(0, this.charIndex - 1);
+            this.charIndex--;
+            
+            if (this.charIndex === 0) {
+                this.isDeleting = false;
+                this.textIndex = (this.textIndex + 1) % this.texts.length;
+                setTimeout(() => this.type(), 500); // Pause before typing next text
+                return;
+            }
+        } else {
+            // Typing characters
+            this.element.textContent = currentText.substring(0, this.charIndex + 1);
+            this.charIndex++;
+            
+            if (this.charIndex === currentText.length) {
+                this.isDeleting = true;
+                setTimeout(() => this.type(), this.backDelay); // Pause before deleting
+                return;
+            }
+        }
+        
+        // Add typing class to cursor to stop blinking while typing
+        if (this.cursor) {
+            this.cursor.classList.add('typing');
+        }
+        
+        const speed = this.isDeleting ? this.backSpeed : this.typeSpeed;
+        setTimeout(() => this.type(), speed);
+    }
+    
+    // Method to pause typing animation
+    pause() {
+        this.isPaused = true;
+        if (this.cursor) {
+            this.cursor.classList.remove('typing');
+        }
+    }
+    
+    // Method to resume typing animation
+    resume() {
+        this.isPaused = false;
+        if (!this.isPaused) {
+            this.type();
+        }
+    }
+}
+
+// Initialize typing animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const typedTextElement = document.querySelector('.typed-text');
+    
+    if (typedTextElement) {
+        const texts = [
+            'Computer Science Graduate @ NYU',
+            'Computer Vision Researcher',
+            'Machine Learning Engineer',
+            'Backend/Cloud Engineer',
+            'AI/ML Enthusiast'
+        ];
+        
+        // Start typing animation after a short delay
+        setTimeout(() => {
+            new TypingAnimation(typedTextElement, texts, 80, 40, 2500);
+        }, 1000);
+    }
+});
