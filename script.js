@@ -41,8 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Update current year in footer
+    // Update current year and last updated date in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    const lastUpdatedElement = document.getElementById('last-updated-date');
+    if (lastUpdatedElement) {
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        lastUpdatedElement.textContent = currentDate.toLocaleDateString('en-US', options);
+    }
 });
 
 // Smooth scrolling for navigation links

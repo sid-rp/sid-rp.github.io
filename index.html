@@ -32,9 +32,49 @@
     <meta name="msapplication-TileColor" content="#3498db">
     <link rel="canonical" href="https://sid-rp.github.io/">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👨‍💻</text></svg>">
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js" defer></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sidhartha Reddy Potu",
+      "url": "https://sid-rp.github.io/",
+      "image": "https://sid-rp.github.io/images/sid.jpg",
+      "jobTitle": "Computer Vision Researcher & ML Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "New York University"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "New York University",
+          "description": "Master of Science in Computer Science"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Indian Institute of Technology Indore",
+          "description": "Bachelor of Technology in Electrical Engineering"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/sid-rp/",
+        "https://github.com/sid-rp"
+      ],
+      "email": "sp7835@nyu.edu"
+    }
+    </script>
 </head>
 <body class="light-theme">
     <header>
@@ -201,7 +241,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>Graduate Student Researcher, CILVR, NYU</h3>
-                        <h4>3D Computer Vision under Prof. David Fouhey</h4>
+                        <p class="experience-subtitle">3D Computer Vision under Prof. David Fouhey</p>
                         <p class="experience-date">January 2024 - Present</p>
                         <ul>
                             <li>Incorporated Colmap SfM and HaMeR transformer to get global 3D trajectories for EgoExo4D and Epic-Kitchens</li>
@@ -216,7 +256,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>Course Assistant, NYU</h3>
-                        <h4>Computer Vision, ML courses</h4>
+                        <p class="experience-subtitle">Computer Vision, ML courses</p>
                         <p class="experience-date">September 2024 - May 2025</p>
                         <ul>
                             <li>Advised 50+ students in <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank">Learning with Large Language and Vision Models</a> (Courant) under <a href="https://www.sainingxie.com/" target="_blank">Prof. Saining Xie</a></li>
@@ -231,7 +271,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>B.Tech Thesis, PRIA Lab, IIT Indore</h3>
-                        <h4>Multimodal Crowd Counting using Vision Transformers</h4>
+                        <p class="experience-subtitle">Multimodal Crowd Counting using Vision Transformers</p>
                         <p class="experience-date">June 2022 - December 2022</p>
                         <ul>
                             <li>Proposed a novel vision transformer-based approach for crowd counting after an in-depth review of 30+ papers</li>
@@ -247,7 +287,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>Research Assistant, NLP Lab, IIT Indore</h3>
-                        <h4>Multi-Modal Hashtag Recommendation</h4>
+                        <p class="experience-subtitle">Multi-Modal Hashtag Recommendation</p>
                         <p class="experience-date">October 2021 - April 2022</p>
                         <ul>
                             <li>Modeled hashtag generation for micro-videos using LSTMs with self-, co-, and hierarchical attention</li>
@@ -271,7 +311,7 @@
                         </div>
                         <div class="education-content">
                             <h3>New York University</h3>
-                            <h4>Master of Science in Computer Science</h4>
+                            <p class="education-subtitle">Master of Science in Computer Science</p>
                             <p class="education-date">2023 - 2025</p>
                             <p>Course Work: Machine Learning, Operating Systems, Computer Vision, AI, Natural Language Processing with Representation Learning, Embodied Learning and Vision, Cloud Computing, Big Data .</p>
                         </div>
@@ -284,7 +324,7 @@
                         </div>
                         <div class="education-content">
                             <h3>Indian Institute of Technology (IIT), Indore</h3>
-                            <h4>Bachelor of Technology in Electrical Engineering</h4>
+                            <p class="education-subtitle">Bachelor of Technology in Electrical Engineering</p>
                             <p class="education-date">2019 - 2023</p>
                             <p>Minor in Astronomy.</p>
                         </div>
@@ -298,7 +338,7 @@
         <div class="container">
             <div class="footer-content">
                 <p>&copy; <span id="current-year">2024</span> Sidhartha Reddy Potu. All rights reserved.</p>
-                <p class="last-updated">Last updated: <span id="last-updated-date">August 19, 2025</span></p>
+                <p class="last-updated">Last updated: <span id="last-updated-date"></span></p>
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer">GitHub</a>
