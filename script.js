@@ -153,12 +153,27 @@ class TypingAnimation {
         this.textIndex = 0;
         this.charIndex = 0;
         this.isDeleting = false;
+        this.isPaused = false;
         this.cursor = document.querySelector('.cursor');
         
+        // Create intersection observer
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.resume();
+                } else {
+                    this.pause();
+                }
+            });
+        });
+
+        this.observer.observe(this.element.parentElement);
         this.type();
     }
     
     type() {
+        if (this.isPaused) return;
+
         const currentText = this.texts[this.textIndex];
         
         if (this.isDeleting) {
@@ -203,8 +218,8 @@ class TypingAnimation {
     
     // Method to resume typing animation
     resume() {
-        this.isPaused = false;
-        if (!this.isPaused) {
+        if (this.isPaused) {
+            this.isPaused = false;
             this.type();
         }
     }
