@@ -1,4 +1,6 @@
+// =============================
 // Theme Toggle Functionality
+// =============================
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
@@ -9,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check for saved theme preference or use device preference
     const savedTheme = localStorage.getItem('theme');
     
-    // Apply the saved theme or device preference
     if (savedTheme === 'dark' || (savedTheme === null && prefersDarkScheme.matches)) {
         document.body.classList.add('dark-theme');
     }
@@ -17,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle theme on button click
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
-        
-        // Save preference to localStorage
         const isDarkTheme = document.body.classList.contains('dark-theme');
         localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
     });
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuToggle.addEventListener('click', () => {
         mobileMenuToggle.classList.toggle('hamburger-active');
         navRight.classList.toggle('active');
-        document.body.classList.toggle('no-scroll'); // Prevent scrolling when menu is open
+        document.body.classList.toggle('no-scroll');
     });
     
     // Close mobile menu when a link is clicked
@@ -46,30 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const lastUpdatedElement = document.getElementById('last-updated-date');
     if (lastUpdatedElement) {
-        const currentDate = new Date();
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        lastUpdatedElement.textContent = currentDate.toLocaleDateString('en-US', options);
+        lastUpdatedElement.textContent = new Date().toLocaleDateString('en-US', options);
     }
 });
 
-// Smooth scrolling for navigation links
+// =============================
+// Smooth Scrolling for Nav Links
+// =============================
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 70, // Offset for header height
+                top: targetElement.offsetTop - 70,
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// Add active class to nav items on scroll
+// =============================
+// Active Nav Highlighting on Scroll
+// =============================
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('nav ul li a');
@@ -77,10 +78,10 @@ window.addEventListener('scroll', () => {
     let current = '';
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
         
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
@@ -93,14 +94,61 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Animated Timeline functionality
+// =============================
+// Scroll-Reveal Animations
+// =============================
+function initializeScrollReveal() {
+    const revealSections = document.querySelectorAll('.reveal-section');
+    const revealItems = document.querySelectorAll('.reveal-item');
+    
+    // Observer for section headings
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -60px 0px'
+    });
+    
+    // Observer for individual items (staggered reveal)
+    const itemObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Stagger the animation based on sibling index
+                const parent = entry.target.parentElement;
+                const siblings = Array.from(parent.querySelectorAll('.reveal-item'));
+                const index = siblings.indexOf(entry.target);
+                
+                setTimeout(() => {
+                    entry.target.classList.add('revealed');
+                }, index * 100);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+    });
+    
+    revealSections.forEach(section => sectionObserver.observe(section));
+    revealItems.forEach(item => itemObserver.observe(item));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeScrollReveal();
+});
+
+// =============================
+// Animated Timeline
+// =============================
 function initializeTimelineAnimation() {
     const timelineLine = document.querySelector('.timeline-line');
     const timelineItems = document.querySelectorAll('.timeline-item');
     
     if (!timelineLine || timelineItems.length === 0) return;
     
-    // Create intersection observer for timeline line
     const timelineObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -112,37 +160,31 @@ function initializeTimelineAnimation() {
         rootMargin: '0px 0px -100px 0px'
     });
     
-    // Create intersection observer for timeline items
     const itemsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add a small delay for staggered animation
                 const index = Array.from(timelineItems).indexOf(entry.target);
                 setTimeout(() => {
                     entry.target.classList.add('animate');
-                }, index * 200); // 200ms delay between each item
+                }, index * 200);
             }
         });
     }, {
-        threshold: 0.3,
+        threshold: 0.2,
         rootMargin: '0px 0px -50px 0px'
     });
     
-    // Observe timeline line
     timelineObserver.observe(timelineLine);
-    
-    // Observe each timeline item
-    timelineItems.forEach(item => {
-        itemsObserver.observe(item);
-    });
+    timelineItems.forEach(item => itemsObserver.observe(item));
 }
 
-// Initialize timeline animation when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initializeTimelineAnimation();
 });
 
+// =============================
 // Dynamic Typing Animation
+// =============================
 class TypingAnimation {
     constructor(element, texts, typeSpeed = 100, backSpeed = 50, backDelay = 2000) {
         this.element = element;
@@ -156,7 +198,6 @@ class TypingAnimation {
         this.isPaused = false;
         this.cursor = document.querySelector('.cursor');
         
-        // Create intersection observer
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -177,29 +218,26 @@ class TypingAnimation {
         const currentText = this.texts[this.textIndex];
         
         if (this.isDeleting) {
-            // Deleting characters
             this.element.textContent = currentText.substring(0, this.charIndex - 1);
             this.charIndex--;
             
             if (this.charIndex === 0) {
                 this.isDeleting = false;
                 this.textIndex = (this.textIndex + 1) % this.texts.length;
-                setTimeout(() => this.type(), 500); // Pause before typing next text
+                setTimeout(() => this.type(), 500);
                 return;
             }
         } else {
-            // Typing characters
             this.element.textContent = currentText.substring(0, this.charIndex + 1);
             this.charIndex++;
             
             if (this.charIndex === currentText.length) {
                 this.isDeleting = true;
-                setTimeout(() => this.type(), this.backDelay); // Pause before deleting
+                setTimeout(() => this.type(), this.backDelay);
                 return;
             }
         }
         
-        // Add typing class to cursor to stop blinking while typing
         if (this.cursor) {
             this.cursor.classList.add('typing');
         }
@@ -208,7 +246,6 @@ class TypingAnimation {
         setTimeout(() => this.type(), speed);
     }
     
-    // Method to pause typing animation
     pause() {
         this.isPaused = true;
         if (this.cursor) {
@@ -216,7 +253,6 @@ class TypingAnimation {
         }
     }
     
-    // Method to resume typing animation
     resume() {
         if (this.isPaused) {
             this.isPaused = false;
@@ -225,7 +261,6 @@ class TypingAnimation {
     }
 }
 
-// Initialize typing animation when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const typedTextElement = document.querySelector('.typed-text');
     
@@ -234,45 +269,38 @@ document.addEventListener('DOMContentLoaded', () => {
             'Computer Science Graduate @ NYU',
             'Computer Vision Researcher',
             'Machine Learning Engineer',
-            'Backend/Cloud Engineer',
+            'Backend / Cloud Engineer',
             'AI/ML Enthusiast'
         ];
         
-        // Start typing animation after a short delay
         setTimeout(() => {
             new TypingAnimation(typedTextElement, texts, 80, 40, 2500);
-        }, 1000);
+        }, 800);
     }
 });
 
-// Back to Top Button functionality
+// =============================
+// Back to Top Button
+// =============================
 function initializeBackToTop() {
     const backToTopButton = document.getElementById('back-to-top');
-    
     if (!backToTopButton) return;
     
-    // Show/hide button based on scroll position
     function toggleBackToTopButton() {
-        if (window.pageYOffset > 300) {
+        if (window.scrollY > 300) {
             backToTopButton.classList.add('show');
         } else {
             backToTopButton.classList.remove('show');
         }
     }
     
-    // Smooth scroll to top
     function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     
-    // Event listeners
     window.addEventListener('scroll', toggleBackToTopButton);
     backToTopButton.addEventListener('click', scrollToTop);
     
-    // Keyboard accessibility
     backToTopButton.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -281,7 +309,6 @@ function initializeBackToTop() {
     });
 }
 
-// Initialize back to top functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initializeBackToTop();
 });

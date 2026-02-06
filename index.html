@@ -38,10 +38,15 @@
     <!-- Resource Hints -->
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -98,6 +103,7 @@
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#education">Education</a></li>
                     </ul>
@@ -111,7 +117,7 @@
     </header>
 
     <main id="main-content">
-        <section id="about" class="section">
+        <section id="about" class="section hero-section">
             <div class="container">
                 <!-- About heading removed as requested -->
                 <div class="profile-container">
@@ -194,7 +200,7 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section reveal-section">
             <div class="container">
                 <h2>Experience</h2>
                 <div class="timeline-container">
@@ -205,7 +211,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>SWE Intern</h3>
-                        <p class="experience-subtitle">Granica AI</p>
+                        <p class="experience-subtitle">Granica AI · Mountain View, CA, USA</p>
                         <p class="experience-date">September 2025 - Present</p>
                         <ul>
                             <li>Implemented a dual-lane FIFO router for memory-bound workers, doubling throughput (<strong>10</strong> to <strong>20+</strong> req/worker)</li>
@@ -221,7 +227,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>MTS Intern</h3>
-                        <p class="experience-subtitle">Neopolis AI · Mountain View, CA</p>
+                        <p class="experience-subtitle">Neopolis AI · Mountain View, CA, USA</p>
                         <p class="experience-date">August 2025 – September 2025</p>
                         <ul>
                             <li>Refined LiveKit-based LLM voice AI Agent prompts to improve instruction-following and downstream tool inputs</li>
@@ -236,7 +242,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>Graduate Student Researcher, CILVR, NYU</h3>
-                        <p class="experience-subtitle">3D Computer Vision under Prof. David Fouhey</p>
+                        <p class="experience-subtitle">3D Computer Vision under Prof. David Fouhey · New York, NY, USA</p>
                         <p class="experience-date">January 2024 - May 2025</p>
                         <ul>
                             <li>Integrated COLMAP SfM with HaMeR to recover global 3D hand trajectories on Epic-Kitchens and EgoExo4D</li>
@@ -253,7 +259,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>Course Assistant, NYU</h3>
-                        <p class="experience-subtitle">Computer Vision, Deep Learning, LLVM courses</p>
+                        <p class="experience-subtitle">Computer Vision, Deep Learning, LLVM courses · New York, NY, USA</p>
                         <p class="experience-date">September 2024 - May 2025</p>
                         <ul>
                             <li>Led office hours, grading, and project support across CV/ML courses; supported <strong>450</strong>+ students</li>
@@ -267,7 +273,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>B.Tech Thesis, PRIA Lab, IIT Indore</h3>
-                        <p class="experience-subtitle">Multimodal Crowd Counting using Vision Transformers <a href="#" target="_blank" rel="noopener noreferrer">[Report]</a></p>
+                        <p class="experience-subtitle">Multimodal Crowd Counting using Vision Transformers · Indore, MP, India <a href="#" target="_blank" rel="noopener noreferrer">[Report]</a></p>
                         <p class="experience-date">June 2022 - December 2022</p>
                         <ul>
                             <li>Trained a ViT-based model in a weakly supervised setting, achieving MAE 15.78 and MSE 30.70</li>
@@ -276,19 +282,103 @@
                         </ul>
                             </div>
                         </div>
+                        <!-- Experience 6 -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                        <h3>Research Assistant, NLP Lab, IIT Indore</h3>
+                        <p class="experience-subtitle">Multi-Modal Hashtag Recommendation · Indore, MP, India</p>
+                        <p class="experience-date">October 2021 - April 2022</p>
+                        <ul>
+                            <li>Modeled hashtag generation for micro-videos using LSTMs with self-, co-, and hierarchical attention</li>
+                            <li>Enhanced feature fusion with BERT, Word2Vec, ResNet152, InceptionV3, VGG16, MFCCs, and spectrograms</li>
+                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="skills" class="section reveal-section">
+            <div class="container">
+                <h2>Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category reveal-item">
+                        <div class="skill-category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Bash</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-item">
+                        <div class="skill-category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>ML / CV / AI</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">COLMAP</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Pandas</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-item">
+                        <div class="skill-category-header">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud & Infrastructure</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">SLURM / HPC</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-item">
+                        <div class="skill-category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Frameworks</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">PySpark</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">LiveKit</span>
+                            <span class="skill-tag">Langfuse</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section reveal-section">
             <div class="container">
                 <h2>Projects</h2>
                 <div class="project-grid">
                     <!-- Point Tracking Project -->
-                    <div class="project-card">
+                    <div class="project-card reveal-item">
                         <h3>Point Tracking in Egocentric Videos</h3>
                         <p>Adapted DINOv2 and CroCoV2 backbones for point tracking in egocentric videos. Evaluated on the EgoPoints benchmark, reporting tracking accuracy at 8 pix, 16 pix, and 24 pix thresholds.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">DINOv2</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://github.com/sid-rp/ego_point_trackig" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/presentation.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Presentation</a>
@@ -297,9 +387,15 @@
                     </div>
                     
                     <!-- Medical QA Models Project -->
-                    <div class="project-card">
+                    <div class="project-card reveal-item">
                         <h3>Fine-Tuning Medical QA Models</h3>
                         <p>Optimized Meta LLaMA 3.2 3B for medical QA using LoRA, QLoRA, and GaLore. Achieved best USMLE accuracies: Step 1 - <strong>42</strong>% (GaLore), Step 2 - <strong>38</strong>% (QLoRA), Step 3 - <strong>45</strong>% (GaLore). Improved MedQuAD F1 scores to <strong>70</strong>% (QLoRA) and 69% (GaLore) with efficient fine-tuning.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">LLaMA</span>
+                            <span class="tech-tag">LoRA / QLoRA</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Hugging Face</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://github.com/sid-rp/medllama" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://github.com/sid-rp/medllama/blob/main/Team_11_Dec_5.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Presentation</a>
@@ -308,18 +404,30 @@
                     </div>
                     
                     <!-- VioletPass Project -->
-                    <div class="project-card">
+                    <div class="project-card reveal-item">
                         <h3>VioletPass: Ticket Booking Platform</h3>
                         <p>Designed a robust, scalable ticket booking platform on AWS to prevent double booking. Implemented Redis distributed locks with TTL for seat reservations and PostgreSQL for finalization. Integrated QR code-based authentication for secure and efficient event check-ins.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://github.com/Stuti-mishra/VioletPass" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                     
                     <!-- AnimeVerse Project -->
-                    <div class="project-card">
+                    <div class="project-card reveal-item">
                         <h3>AnimeVerse: Recommendation System</h3>
                         <p>Built a personalized anime recommendation system; analyzed broadcast types, genres, and scores. Analyzed <strong>300k</strong> user-anime interactions with PySpark and trained ALS, TF-IDF, and ChromaDB models.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">PySpark</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">TF-IDF</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://github.com/sid-rp/AnimeVerse" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
@@ -328,12 +436,12 @@
             </div>
         </section>
 
-        <section id="education" class="section">
+        <section id="education" class="section reveal-section">
             <div class="container">
                 <h2>Education</h2>
                 <div class="education-grid">
                     <!-- NYU Education -->
-                    <div class="education-item">
+                    <div class="education-item reveal-item">
                         <div class="education-logo">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
@@ -341,12 +449,12 @@
                             <h3>New York University</h3>
                             <p class="education-subtitle">Master of Science in Computer Science</p>
                             <p class="education-date">2023 - 2025</p>
-                            <p>Course Work: Machine Learning, Operating Systems, Computer Vision, AI, Natural Language Processing with Representation Learning, Embodied Learning and Vision, Cloud Computing, Big Data .</p>
+                            <p>Course Work: Machine Learning, Operating Systems, Computer Vision, AI, Natural Language Processing with Representation Learning, Embodied Learning and Vision, Cloud Computing, Big Data.</p>
                         </div>
                     </div>
 
                     <!-- IIT Education -->
-                    <div class="education-item">
+                    <div class="education-item reveal-item">
                         <div class="education-logo">
                             <i class="fas fa-university"></i>
                         </div>
