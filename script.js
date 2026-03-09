@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Read more / Read less toggle for intro
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    const introDetails = document.querySelector('.intro-details');
+    if (readMoreBtn && introDetails) {
+        readMoreBtn.addEventListener('click', () => {
+            const isExpanded = introDetails.classList.toggle('expanded');
+            readMoreBtn.textContent = isExpanded ? 'Read less' : 'Read more';
+            readMoreBtn.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+
     // Update current year and last updated date in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
     

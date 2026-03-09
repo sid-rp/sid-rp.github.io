@@ -521,6 +521,44 @@ nav a.active::after {
 
 .profile-content {
     flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-expandable {
+    margin-top: 0.5rem;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    font-family: inherit;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 10;
+    display: block;
+}
+
+.read-more-btn:hover {
+    opacity: 0.8;
+}
+
+.intro-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.intro-details.expanded {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 0.75rem;
 }
 
 .summary {
@@ -712,6 +750,7 @@ nav a.active::after {
 .featured-project {
     border: 1.5px solid rgba(245, 166, 35, 0.4);
     background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg) 95%, rgba(245, 166, 35, 0.05) 100%);
+    grid-column: 1 / -1;
 }
 
 .featured-project:hover {
