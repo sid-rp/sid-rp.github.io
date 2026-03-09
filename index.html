@@ -103,7 +103,6 @@
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#education">Education</a></li>
                     </ul>
@@ -162,8 +161,13 @@
                           </a>,
                           with a strong background in Computer Vision, Machine Learning, and Software Development.
                           <strong>I am actively seeking full-time opportunities</strong> in software engineering, machine learning, and computer vision.
+                          Most recently, I <strong>won first place</strong> at the
+                          <a href="#kube-sre-gym">
+                            OpenEnv Hackathon
+                          </a>
+                          in SF, building an RL environment where a small LLM learns to fix real Kubernetes incidents from scratch.
                         </p>
-                      
+
                         <p class="summary">
                           I'm currently a SWE Intern at Granica AI. I previously worked as a Graduate Student Researcher at NYU's
                           <a href="https://wp.nyu.edu/cilvr/" target="_blank" rel="noopener">
@@ -300,76 +304,29 @@
             </div>
         </section>
 
-        <section id="skills" class="section reveal-section">
-            <div class="container">
-                <h2>Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category reveal-item">
-                        <div class="skill-category-header">
-                            <i class="fas fa-code"></i>
-                            <h3>Languages</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Go</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Bash</span>
-                        </div>
-                    </div>
-                    <div class="skill-category reveal-item">
-                        <div class="skill-category-header">
-                            <i class="fas fa-brain"></i>
-                            <h3>ML / CV / AI</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">Hugging Face</span>
-                            <span class="skill-tag">COLMAP</span>
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Pandas</span>
-                        </div>
-                    </div>
-                    <div class="skill-category reveal-item">
-                        <div class="skill-category-header">
-                            <i class="fas fa-cloud"></i>
-                            <h3>Cloud & Infrastructure</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">GCP</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">Redis</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">SLURM / HPC</span>
-                        </div>
-                    </div>
-                    <div class="skill-category reveal-item">
-                        <div class="skill-category-header">
-                            <i class="fas fa-tools"></i>
-                            <h3>Tools & Frameworks</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">PySpark</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">LiveKit</span>
-                            <span class="skill-tag">Langfuse</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="projects" class="section reveal-section">
             <div class="container">
                 <h2>Projects</h2>
                 <div class="project-grid">
+                    <!-- Kube SRE Gym - Hackathon Winner -->
+                    <div id="kube-sre-gym" class="project-card featured-project reveal-item">
+                        <span class="winner-badge"><i class="fas fa-trophy"></i> Hackathon Winner</span>
+                        <h3>Kube SRE Gym</h3>
+                        <p>Built a self-improving RL environment where a small language model learns to diagnose and fix real Kubernetes production incidents from scratch, with zero hardcoded knowledge of the cluster. The agent interacts with a live GKE cluster via kubectl, not a simulator. An adversarial designer creates targeted incidents based on tracked weaknesses, while a curriculum controller escalates difficulty as mastery improves. Trained multiple Qwen-series models with GRPO + vLLM, scored by an LLM judge that evaluates SRE workflow quality across expert personas. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Reinforcement Learning</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">GRPO</span>
+                            <span class="tech-tag">vLLM</span>
+                            <span class="tech-tag">GKE</span>
+                            <span class="tech-tag">Claude API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sid-rp/kube-sre-gym" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf" target="_blank" rel="noopener noreferrer" class="hackathon-link">Hackathon</a>
+                        </div>
+                    </div>
+
                     <!-- Point Tracking Project -->
                     <div class="project-card reveal-item">
                         <h3>Point Tracking in Egocentric Videos</h3>

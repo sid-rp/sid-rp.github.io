@@ -708,6 +708,47 @@ nav a.active::after {
     border-color: rgba(var(--accent-color-rgb), 0.3);
 }
 
+/* Featured Project & Winner Badge */
+.featured-project {
+    border: 1.5px solid rgba(245, 166, 35, 0.4);
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg) 95%, rgba(245, 166, 35, 0.05) 100%);
+}
+
+.featured-project:hover {
+    border-color: rgba(245, 166, 35, 0.6);
+    box-shadow: 0 12px 30px rgba(245, 166, 35, 0.12);
+}
+
+.winner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f5a623, #f7c948);
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+    letter-spacing: 0.02em;
+}
+
+.project-links a.hackathon-link {
+    background-color: #8e44ad;
+}
+
+.project-links a.hackathon-link:hover {
+    background-color: #7d3c98;
+    box-shadow: 0 4px 12px rgba(142, 68, 173, 0.3);
+}
+
+.project-links a.hackathon-link::before {
+    content: '\f0ac';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
 /* Project Tech Tags */
 .project-tech-tags {
     display: flex;
