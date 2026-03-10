@@ -300,7 +300,7 @@
                     <div id="kube-sre-gym" class="project-card featured-project reveal-item">
                         <span class="winner-badge"><i class="fas fa-trophy"></i> Hackathon Winner</span>
                         <h3>Kube SRE Gym</h3>
-                        <p>Built a self-improving RL environment where a small language model learns to diagnose and fix real Kubernetes production incidents from scratch, with zero hardcoded knowledge of the cluster. The agent interacts with a live GKE cluster via kubectl, not a simulator. An adversarial designer creates targeted incidents based on tracked weaknesses, while a curriculum controller escalates difficulty as mastery improves. Trained multiple Qwen-series models with GRPO + vLLM, scored by an LLM judge that evaluates SRE workflow quality across expert personas. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
+                        <p>Awarded 1st place out of 100+ teams at the <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley; $100K+ prize pool). An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer creates targeted scenarios based on tracked weaknesses, with curriculum control and an LLM judge scoring SRE workflow quality across expert personas. Post-trained Qwen-series models with GRPO via TRL + vLLM on H100. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">Reinforcement Learning</span>
                             <span class="tech-tag">Kubernetes</span>
@@ -318,7 +318,7 @@
                     <!-- Point Tracking Project -->
                     <div class="project-card reveal-item">
                         <h3>Point Tracking in Egocentric Videos</h3>
-                        <p>Adapted DINOv2 and CroCoV2 backbones for point tracking in egocentric videos. Evaluated on the EgoPoints benchmark, reporting tracking accuracy at 8 pix, 16 pix, and 24 pix thresholds.</p>
+                        <p>Explored how self-supervised vision backbones (DINOv2, CroCoV2) transfer to the task of tracking points in egocentric videos. Swapped out the default encoder in a point tracking pipeline, trained on EgoPoints, and compared tracking accuracy across 8, 16, and 24 pixel thresholds.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">DINOv2</span>
@@ -334,7 +334,7 @@
                     <!-- Medical QA Models Project -->
                     <div class="project-card reveal-item">
                         <h3>Fine-Tuning Medical QA Models</h3>
-                        <p>Optimized Meta LLaMA 3.2 3B for medical QA using LoRA, QLoRA, and GaLore. Achieved best USMLE accuracies: Step 1 - <strong>42</strong>% (GaLore), Step 2 - <strong>38</strong>% (QLoRA), Step 3 - <strong>45</strong>% (GaLore). Improved MedQuAD F1 scores to <strong>70</strong>% (QLoRA) and 69% (GaLore) with efficient fine-tuning.</p>
+                        <p>Fine-tuned Meta LLaMA 3.2 3B for medical question answering using LoRA, QLoRA, and GaLore. Compared parameter-efficient methods head-to-head on USMLE Steps 1-3 and MedQuAD. Best results: <strong>45</strong>% USMLE accuracy (GaLore) and <strong>70</strong>% MedQuAD F1 (QLoRA), showing that efficient fine-tuning can meaningfully improve domain-specific performance on a 3B model.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">LLaMA</span>
                             <span class="tech-tag">LoRA / QLoRA</span>
@@ -351,7 +351,7 @@
                     <!-- VioletPass Project -->
                     <div class="project-card reveal-item">
                         <h3>VioletPass: Ticket Booking Platform</h3>
-                        <p>Designed a robust, scalable ticket booking platform on AWS to prevent double booking. Implemented Redis distributed locks with TTL for seat reservations and PostgreSQL for finalization. Integrated QR code-based authentication for secure and efficient event check-ins.</p>
+                        <p>A scalable ticket booking platform on AWS that prevents double booking using Redis distributed locks with TTL for seat reservations and PostgreSQL for finalization. Includes QR code-based authentication for event check-ins.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">AWS</span>
                             <span class="tech-tag">Redis</span>
@@ -366,7 +366,7 @@
                     <!-- AnimeVerse Project -->
                     <div class="project-card reveal-item">
                         <h3>AnimeVerse: Recommendation System</h3>
-                        <p>Built a personalized anime recommendation system; analyzed broadcast types, genres, and scores. Analyzed <strong>300k</strong> user-anime interactions with PySpark and trained ALS, TF-IDF, and ChromaDB models.</p>
+                        <p>A personalized anime recommendation system that processes <strong>300k</strong> user-anime interactions with PySpark. Compared collaborative filtering (ALS), content-based (TF-IDF), and semantic search (ChromaDB) approaches to surface relevant recommendations.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">PySpark</span>
                             <span class="tech-tag">ChromaDB</span>
