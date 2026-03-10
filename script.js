@@ -277,11 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (typedTextElement) {
         const texts = [
-            'Computer Science Graduate @ NYU',
+            'ML Engineer',
             'Computer Vision Researcher',
-            'Machine Learning Engineer',
-            'Backend / Cloud Engineer',
-            'AI/ML Enthusiast'
+            'Software Engineer',
+            'Hackathon Winner'
         ];
         
         setTimeout(() => {

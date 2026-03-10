@@ -157,7 +157,7 @@
                           <strong>I am actively seeking full-time opportunities.</strong>
                           Most recently, I <strong>won first place</strong> at the
                           <a href="#kube-sre-gym">OpenEnv Hackathon</a>
-                          in SF, building an RL environment where a small LLM learns to fix real Kubernetes incidents from scratch.
+                          in SF, where my team built an RL environment that teaches a small LLM to diagnose and fix real Kubernetes incidents from scratch.
                         </p>
 
                         <div class="intro-expandable">
@@ -205,11 +205,11 @@
                         <p class="experience-subtitle">Granica AI · Mountain View, CA, USA</p>
                         <p class="experience-date">September 2025 - March 2026</p>
                         <ul>
-                            <li>Implemented a dual-lane FIFO router for memory-bound workers, doubling throughput (<strong>10</strong> to <strong>20+</strong> req/worker)</li>
-                            <li>Prevented runaway Kubernetes API calls under <strong>20k</strong> concurrency by caching scaler state in Go</li>
-                            <li>Fixed lock contention and races in load balancer/consumer goroutines, improving throughput (<strong>28</strong> to <strong>31-32</strong> cores)</li>
+                            <li>Built a dual-lane FIFO load balancer for a <strong>400+</strong> node K8s cluster, doubling throughput (<strong>10</strong> to <strong>20+</strong> req/worker)</li>
+                            <li>Eliminated runaway K8s API calls at <strong>20k</strong> concurrency by caching scaler state in Go</li>
+                            <li>Resolved lock contention and races in load-balancer goroutines, improving CPU utilization from <strong>87%</strong> to <strong>97%</strong></li>
+                            <li>Designed local scale-validation and integration test suites for the load-balancer and worker routing logic</li>
                             <li>Built a benchmark suite to validate performance and correctness as a release gate for a new product line</li>
-                            <li>Built scale-validation tests for multi-consumer routing and integration checks for compression pipelines</li>
                         </ul>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                         <ul>
                             <li>Refined LiveKit-based LLM voice AI Agent prompts to improve instruction-following and downstream tool inputs</li>
                             <li>Used Langfuse observability to inspect agent outputs and guide prompt iteration</li>
-                            <li>Added session inactivity timeouts to prevent idle conversations and improve reliability</li>
+                            <li>Introduced session inactivity timeouts to prevent idle conversations and strengthen reliability</li>
                         </ul>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                             <li>Optimized hand-motion trajectories using temporal smoothing with velocity and jerk regularization</li>
                             <li>Recovered full-perspective 3D from weak-perspective predictions using SfM intrinsics and frame transforms</li>
                             <li>Developed visualization workflows with Rerun Viewer and scaled experiments on NYU HPC using SLURM</li>
-                            <li>Benchmarked depth-based signals for hand--object contact and ran ablations across loss functions and model variants</li>
+                            <li>Benchmarked depth-based signals for hand-object contact and ran ablations across loss functions and model variants</li>
                         </ul>
                             </div>
                         </div>
@@ -254,8 +254,8 @@
                         <p class="experience-subtitle">Computer Vision, Deep Learning, LLVM courses · New York, NY, USA</p>
                         <p class="experience-date">September 2024 - May 2025</p>
                         <ul>
-                            <li>Led office hours, grading, and project support across CV/ML courses; supported <strong>450</strong>+ students</li>
-                            <li>Course staff for DL (<a href="https://chinmayhegde.github.io/" target="_blank" rel="noopener noreferrer">Prof. Chinmay Hegde</a>) and <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank" rel="noopener noreferrer">LLVM</a> (<a href="https://www.sainingxie.com/" target="_blank" rel="noopener noreferrer">Prof. Saining Xie</a>); Advanced CV (<a href="https://cs.nyu.edu/~fouhey/" target="_blank" rel="noopener noreferrer">Prof. David Fouhey</a>)</li>
+                            <li>Mentored <strong>450+</strong> students through office hours, grading, and project advising across 3 courses</li>
+                            <li>Assisted DL (<a href="https://chinmayhegde.github.io/" target="_blank" rel="noopener noreferrer">Prof. Chinmay Hegde</a>), <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank" rel="noopener noreferrer">LLVM</a> (<a href="https://www.sainingxie.com/" target="_blank" rel="noopener noreferrer">Prof. Saining Xie</a>), and Advanced CV (<a href="https://cs.nyu.edu/~fouhey/" target="_blank" rel="noopener noreferrer">Prof. David Fouhey</a>)</li>
                         </ul>
                             </div>
                         </div>
@@ -269,8 +269,8 @@
                         <p class="experience-date">June 2022 - December 2022</p>
                         <ul>
                             <li>Trained a ViT-based model in a weakly supervised setting, achieving MAE 15.78 and MSE 30.70</li>
-                            <li>Designed a Pyramid Vision Transformer (PVT v2) model, achieving MAE 19.218 and MSE 32.940</li>
-                            <li>Ranked <strong>top 10 of 250+</strong> B.Tech theses; nominated for Best Thesis award at IIT Indore</li>
+                            <li>Designed a Pyramid Vision Transformer (PVT v2) model, achieving MAE 19.22 and MSE 32.94</li>
+                            <li>Ranked in the <strong>top 10 of 250+</strong> B.Tech theses; nominated for Best Thesis award at IIT Indore</li>
                         </ul>
                             </div>
                         </div>
@@ -300,7 +300,7 @@
                     <div id="kube-sre-gym" class="project-card featured-project reveal-item">
                         <span class="winner-badge"><i class="fas fa-trophy"></i> Hackathon Winner</span>
                         <h3>Kube SRE Gym</h3>
-                        <p>Awarded 1st place out of 100+ teams at the <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley; $100K+ prize pool). An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer creates targeted scenarios based on tracked weaknesses, with curriculum control and an LLM judge scoring SRE workflow quality across expert personas. Post-trained Qwen-series models with GRPO via TRL + vLLM on H100. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
+                        <p>Awarded <strong>1st place</strong> out of <strong>100+</strong> teams at the <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley; <strong>$100K+</strong> prize pool). An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer creates targeted scenarios based on tracked weaknesses, with curriculum control and an LLM judge scoring SRE workflow quality across expert personas. Post-trained Qwen-series models with GRPO via TRL + vLLM on H100. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">Reinforcement Learning</span>
                             <span class="tech-tag">Kubernetes</span>
@@ -392,7 +392,7 @@
                         </div>
                         <div class="education-content">
                             <h3>New York University</h3>
-                            <p class="education-subtitle">Master of Science in Computer Science</p>
+                            <p class="education-subtitle">Master of Science in Computer Science; GPA: 3.83/4</p>
                             <p class="education-date">2023 - 2025</p>
                             <p>Course Work: Machine Learning, Operating Systems, Computer Vision, AI, Natural Language Processing with Representation Learning, Embodied Learning and Vision, Cloud Computing, Big Data.</p>
                         </div>
@@ -405,9 +405,8 @@
                         </div>
                         <div class="education-content">
                             <h3>Indian Institute of Technology (IIT), Indore</h3>
-                            <p class="education-subtitle">Bachelor of Technology in Electrical Engineering</p>
+                            <p class="education-subtitle">Bachelor of Technology in Electrical Engineering, Minor in Astronomy; GPA: 8.49/10</p>
                             <p class="education-date">2019 - 2023</p>
-                            <p>Minor in Astronomy.</p>
                         </div>
                     </div>
                 </div>
