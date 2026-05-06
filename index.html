@@ -8,7 +8,7 @@
     <title>Sidhartha Reddy Potu | ML Engineer & Software Engineer</title>
     <meta name="title" content="Sidhartha Reddy Potu | ML Engineer & Software Engineer">
     <meta name="description" content="MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, Reinforcement Learning, and Software Engineering. Actively seeking full-time opportunities.">
-    <meta name="keywords" content="Computer Vision, Machine Learning, AI Research, Deep Learning, Reinforcement Learning, NYU, Python, PyTorch, Kubernetes, Software Engineering">
+    <meta name="keywords" content="Computer Vision, Machine Learning, AI Research, Deep Learning, Reinforcement Learning, RLHF, GRPO, LLM, Large Language Models, Vision Transformers, DINOv2, NYU, CILVR, Python, Go, PyTorch, Hugging Face, TRL, vLLM, Kubernetes, Docker, AWS, GCP, Redis, PostgreSQL, Distributed Systems, Software Engineering, MLE, ML Engineer">
     <meta name="author" content="Sidhartha Reddy Potu">
     <meta name="robots" content="index, follow">
     
@@ -118,16 +118,14 @@
                 <div class="profile-container">
                     <div class="profile-column">
                         <div class="profile-image">
-                            <img src="images/sid-400.jpg" 
+                            <img src="images/sid-400.jpg"
                                  srcset="images/sid-200.jpg 200w,
                                          images/sid-400.jpg 400w,
                                          images/sid-800.jpg 800w"
                                  sizes="(max-width: 768px) 200px, 400px"
-                                 alt="Sidhartha Reddy Potu" 
-                                 loading="lazy"
-                                 oncontextmenu="return false;" 
-                                 ondragstart="return false;" 
-                                 onselectstart="return false;">
+                                 alt="Sidhartha Reddy Potu"
+                                 fetchpriority="high"
+                                 decoding="async">
                         </div>
                         <div class="social-links">
                             <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
@@ -237,11 +235,12 @@
                         <p class="experience-subtitle">3D Computer Vision under Prof. David Fouhey · New York, NY, USA</p>
                         <p class="experience-date">January 2024 - May 2025</p>
                         <ul>
-                            <li>Integrated COLMAP SfM with HaMeR to recover global 3D hand trajectories on Epic-Kitchens and EgoExo4D</li>
+                            <li>Combined HaMeR transformer poses with COLMAP SfM to recover global 3D hand trajectories on Epic-Kitchens and EgoExo4D</li>
                             <li>Optimized hand-motion trajectories using temporal smoothing with velocity and jerk regularization</li>
                             <li>Recovered full-perspective 3D from weak-perspective predictions using SfM intrinsics and frame transforms</li>
-                            <li>Developed visualization workflows with Rerun Viewer and scaled experiments on NYU HPC using SLURM</li>
-                            <li>Benchmarked depth-based signals for hand-object contact and ran ablations across loss functions and model variants</li>
+                            <li>Fine-tuned DINOv2 ViT-L/ViT-B and EfficientNet-V2 for hand-object contact classification on Hands23, ablating losses (Weighted/Balanced CE, Focal); best model reached <strong>0.97</strong> in-domain and <strong>0.96</strong> cross-dataset ROC AUC on Epic-Kitchens</li>
+                            <li>Evaluated Depth Anything and Metric3D as auxiliary depth signals for the hand-object contact task</li>
+                            <li>Developed visualization workflows with Rerun Viewer and scaled multi-GPU experiments on NYU HPC using SLURM</li>
                         </ul>
                             </div>
                         </div>
@@ -265,7 +264,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                         <h3>B.Tech Thesis, PRIA Lab, IIT Indore</h3>
-                        <p class="experience-subtitle">Multimodal Crowd Counting using Vision Transformers · Indore, MP, India <a href="#" target="_blank" rel="noopener noreferrer">[Report]</a></p>
+                        <p class="experience-subtitle">Multimodal Crowd Counting using Vision Transformers · Indore, MP, India</p>
                         <p class="experience-date">June 2022 - December 2022</p>
                         <ul>
                             <li>Trained a ViT-based model in a weakly supervised setting, achieving MAE 15.78 and MSE 30.70</li>
@@ -300,7 +299,9 @@
                     <div id="kube-sre-gym" class="project-card featured-project reveal-item">
                         <span class="winner-badge"><i class="fas fa-trophy"></i> Hackathon Winner</span>
                         <h3>Kube SRE Gym</h3>
-                        <p>Awarded <strong>1st place</strong> out of <strong>100+</strong> teams at the <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley; <strong>$100K+</strong> prize pool). An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer creates targeted scenarios based on tracked weaknesses, with curriculum control and an LLM judge scoring SRE workflow quality across expert personas. Post-trained Qwen-series models with GRPO via TRL + vLLM on H100. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
+                        <p>Awarded <strong>1st place</strong> out of <strong>100+</strong> teams at the <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley; <strong>$100K+</strong> prize pool).</p>
+                        <p>An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer creates targeted scenarios based on tracked weaknesses, with curriculum control and an LLM judge scoring SRE workflow quality across expert personas.</p>
+                        <p>Post-trained Qwen-series models with GRPO via TRL + vLLM on H100, using OpenEnv and Hugging Face Spaces. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">Reinforcement Learning</span>
                             <span class="tech-tag">Kubernetes</span>
@@ -318,7 +319,7 @@
                     <!-- Point Tracking Project -->
                     <div class="project-card reveal-item">
                         <h3>Point Tracking in Egocentric Videos</h3>
-                        <p>Explored how self-supervised vision backbones (DINOv2, CroCoV2) transfer to the task of tracking points in egocentric videos. Swapped out the default encoder in a point tracking pipeline, trained on EgoPoints, and compared tracking accuracy across 8, 16, and 24 pixel thresholds.</p>
+                        <p>Course project under <a href="https://mengyeren.com/" target="_blank" rel="noopener">Prof. Mengye Ren</a> for the <a href="https://elvcourse.org/2025/" target="_blank" rel="noopener">Embodied Learning and Vision</a> course at NYU. Evaluated self-supervised vision backbones (DINOv2, CroCoV2) zero-shot for egocentric point tracking on EgoPoints, then self-supervised fine-tuned both backbones with a lightweight delta network predicting per-frame keypoint displacement. Compared tracking accuracy across 8, 16, and 24 pixel thresholds.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">DINOv2</span>
@@ -334,7 +335,7 @@
                     <!-- Medical QA Models Project -->
                     <div class="project-card reveal-item">
                         <h3>Fine-Tuning Medical QA Models</h3>
-                        <p>Fine-tuned Meta LLaMA 3.2 3B for medical question answering using LoRA, QLoRA, and GaLore. Compared parameter-efficient methods head-to-head on USMLE Steps 1-3 and MedQuAD. Best results: <strong>45</strong>% USMLE accuracy (GaLore) and <strong>70</strong>% MedQuAD F1 (QLoRA), showing that efficient fine-tuning can meaningfully improve domain-specific performance on a 3B model.</p>
+                        <p>Fine-tuned Meta LLaMA 3.2 3B for medical question answering using LoRA, QLoRA, and GaLore. Compared parameter-efficient methods head-to-head on USMLE Steps 1-3 and MedQuAD. Best USMLE accuracies: Step 1 <strong>42%</strong> (GaLore), Step 2 <strong>38%</strong> (QLoRA), Step 3 <strong>45%</strong> (GaLore); boosted MedQuAD F1 to <strong>70%</strong> on open-domain medical QA &mdash; showing that efficient fine-tuning can meaningfully improve domain-specific performance on a 3B model.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">LLaMA</span>
                             <span class="tech-tag">LoRA / QLoRA</span>
@@ -351,7 +352,7 @@
                     <!-- VioletPass Project -->
                     <div class="project-card reveal-item">
                         <h3>VioletPass: Ticket Booking Platform</h3>
-                        <p>A scalable ticket booking platform on AWS that prevents double booking using Redis distributed locks with TTL for seat reservations and PostgreSQL for finalization. Includes QR code-based authentication for event check-ins.</p>
+                        <p>Architected a scalable ticket-booking platform on AWS that prevents double booking using Redis distributed locks. Configured Redis TTL-based seat reservations with PostgreSQL finalization for transactional integrity, plus QR-code verification for secure and efficient event check-ins.</p>
                         <div class="project-tech-tags">
                             <span class="tech-tag">AWS</span>
                             <span class="tech-tag">Redis</span>
@@ -417,7 +418,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; <span id="current-year">2024</span> Sidhartha Reddy Potu. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Sidhartha Reddy Potu. All rights reserved.</p>
                 <p class="last-updated">Last updated: <span id="last-updated-date"></span></p>
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
