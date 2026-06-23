@@ -1,68 +1,68 @@
 /* Variables for light and dark themes */
 :root {
     /* Light theme (default) */
-    --bg-color: #ffffff;
-    --text-color: #374151; /* Gray 700 */
-    --heading-color: #111827; /* Gray 900 */
+    --bg-color: #f8fbff;
+    --text-color: #334155;
+    --heading-color: #0f172a;
     --card-bg: #ffffff;
     --card-shadow: rgba(0, 0, 0, 0.05);
     --card-shadow-hover: rgba(0, 0, 0, 0.12);
-    --border-color: #e5e7eb; /* Gray 200 */
-    --link-color: #2563eb; /* Blue 600 */
+    --border-color: #dbe7f6;
+    --link-color: #2563eb;
     --link-color-rgb: 37, 99, 235;
-    --link-hover-color: #1d4ed8; /* Blue 700 */
-    --nav-bg: rgba(255, 255, 255, 0.72);
-    --primary-color: #111827;
-    --secondary-color: #6b7280; /* Gray 500 */
-    --background-color: #ffffff;
-    --section-bg-color: #f9fafb; /* Gray 50 */
-    --accent-color: #3b82f6; /* Blue 500 */
-    --accent-color-rgb: 59, 130, 246;
-    --hover-color: #2563eb;
-    --date-bg-color: #eff6ff; /* Blue 50 */
-    --date-border-color: #bfdbfe; /* Blue 200 */
-    --hero-gradient-start: #eff6ff;
-    --hero-gradient-end: #ffffff;
-    --skill-tag-bg: #eff6ff;
-    --skill-tag-border: #bfdbfe;
+    --link-hover-color: #1d4ed8;
+    --nav-bg: rgba(248, 251, 255, 0.78);
+    --primary-color: #0f172a;
+    --secondary-color: #64748b;
+    --background-color: #f8fbff;
+    --section-bg-color: #eef5ff;
+    --accent-color: #0ea5e9;
+    --accent-color-rgb: 14, 165, 233;
+    --hover-color: #1d4ed8;
+    --date-bg-color: #eaf4ff;
+    --date-border-color: #b8d9ff;
+    --hero-gradient-start: #eaf4ff;
+    --hero-gradient-end: #f8fbff;
+    --skill-tag-bg: #eaf4ff;
+    --skill-tag-border: #b8d9ff;
     --skill-tag-color: #1e40af;
-    --tech-tag-bg: #f0fdf4;
-    --tech-tag-border: #bbf7d0;
-    --tech-tag-color: #166534;
+    --tech-tag-bg: #ecfeff;
+    --tech-tag-border: #a5f3fc;
+    --tech-tag-color: #155e75;
 }
 
 /* Dark theme variables */
 .dark-theme {
-    --bg-color: #0f172a; /* Slate 900 */
-    --text-color: #cbd5e1; /* Slate 300 */
-    --heading-color: #f1f5f9; /* Slate 100 */
-    --card-bg: #1e293b; /* Slate 800 */
+    --bg-color: #08111f;
+    --text-color: #d7e3f4;
+    --heading-color: #f4f8ff;
+    --card-bg: #101c2e;
     --card-shadow: rgba(0, 0, 0, 0.3);
     --card-shadow-hover: rgba(0, 0, 0, 0.5);
-    --border-color: #334155; /* Slate 700 */
-    --link-color: #60a5fa; /* Blue 400 */
+    --border-color: #223552;
+    --link-color: #60a5fa;
     --link-color-rgb: 96, 165, 250;
-    --link-hover-color: #93c5fd; /* Blue 300 */
-    --nav-bg: rgba(15, 23, 42, 0.72);
-    --primary-color: #f8fafc;
-    --secondary-color: #94a3b8; /* Slate 400 */
-    --background-color: #0f172a;
-    --section-bg-color: #1e293b;
-    --accent-color: #60a5fa;
-    --accent-color-rgb: 96, 165, 250;
+    --link-hover-color: #93c5fd;
+    --nav-bg: rgba(8, 17, 31, 0.82);
+    --primary-color: #f4f8ff;
+    --secondary-color: #9fb2cc;
+    --background-color: #08111f;
+    --section-bg-color: #0d1829;
+    --accent-color: #38bdf8;
+    --accent-color-rgb: 56, 189, 248;
     --hover-color: #93c5fd;
-    --date-bg-color: #1e293b;
-    --date-border-color: #3b82f6;
+    --date-bg-color: rgba(96, 165, 250, 0.12);
+    --date-border-color: rgba(96, 165, 250, 0.32);
     --timeline-color: #60a5fa;
-    --timeline-shadow: rgba(96, 165, 250, 0.4);
-    --hero-gradient-start: #0f172a;
-    --hero-gradient-end: #1e293b;
-    --skill-tag-bg: rgba(59, 130, 246, 0.15);
-    --skill-tag-border: rgba(96, 165, 250, 0.3);
-    --skill-tag-color: #93c5fd;
-    --tech-tag-bg: rgba(34, 197, 94, 0.1);
-    --tech-tag-border: rgba(34, 197, 94, 0.25);
-    --tech-tag-color: #86efac;
+    --timeline-shadow: rgba(96, 165, 250, 0.35);
+    --hero-gradient-start: #08111f;
+    --hero-gradient-end: #0d1829;
+    --skill-tag-bg: rgba(96, 165, 250, 0.14);
+    --skill-tag-border: rgba(96, 165, 250, 0.32);
+    --skill-tag-color: #bfdbfe;
+    --tech-tag-bg: rgba(56, 189, 248, 0.12);
+    --tech-tag-border: rgba(56, 189, 248, 0.28);
+    --tech-tag-color: #bae6fd;
 }
 
 /* Reset and base styles */
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 h2 {
@@ -141,7 +141,7 @@ h2 {
     text-align: center;
     position: relative;
     padding-bottom: 0.75rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 h2::after {
@@ -200,7 +200,7 @@ nav {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--heading-color);
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
     z-index: 1002;
     background: linear-gradient(135deg, var(--heading-color), var(--accent-color));
     -webkit-background-clip: text;
@@ -446,7 +446,7 @@ nav a.active::after {
     margin-bottom: 0.5rem;
     margin-top: 0;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
     background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -774,12 +774,12 @@ nav a.active::after {
 }
 
 .project-links a.hackathon-link {
-    background-color: #8e44ad;
+    background-color: #4f46e5;
 }
 
 .project-links a.hackathon-link:hover {
-    background-color: #7d3c98;
-    box-shadow: 0 4px 12px rgba(142, 68, 173, 0.3);
+    background-color: #4338ca;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
 .project-links a.hackathon-link::before {
@@ -836,21 +836,21 @@ nav a.active::after {
 }
 
 .project-links a.presentation-link {
-    background-color: #e74c3c;
+    background-color: #2563eb;
 }
 
 .project-links a.presentation-link:hover {
-    background-color: #c0392b;
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .project-links a.report-link {
-    background-color: #27ae60;
+    background-color: #0284c7;
 }
 
 .project-links a.report-link:hover {
-    background-color: #229954;
-    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    background-color: #0369a1;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
 }
 
 .project-links a::before {
@@ -1324,6 +1324,10 @@ footer {
     .profile-content {
         text-align: center;
     }
+
+    .read-more-btn {
+        margin: 0 auto;
+    }
     
     .project-grid {
         grid-template-columns: 1fr;
@@ -1474,11 +1478,32 @@ footer {
     h2 {
         font-size: 1.6rem;
     }
+
 }
 
 /* Large screens */
 @media (min-width: 1024px) {
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-section h2,
+    .reveal-item,
+    .timeline-item,
+    .timeline-line,
+    .timeline-dot {
+        opacity: 1;
+        transform: none;
     }
 }

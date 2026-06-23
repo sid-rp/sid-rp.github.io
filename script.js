@@ -14,30 +14,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'dark' || (savedTheme === null && prefersDarkScheme.matches)) {
         document.body.classList.add('dark-theme');
     }
+    themeToggle.setAttribute('aria-pressed', document.body.classList.contains('dark-theme'));
     
     // Toggle theme on button click
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
         const isDarkTheme = document.body.classList.contains('dark-theme');
         localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+        themeToggle.setAttribute('aria-pressed', isDarkTheme);
     });
+
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('hamburger-active');
+        navRight.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    }
     
     // Mobile menu toggle functionality
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
     mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('hamburger-active');
-        navRight.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
+        const isOpening = !navRight.classList.contains('active');
+        mobileMenuToggle.classList.toggle('hamburger-active', isOpening);
+        navRight.classList.toggle('active', isOpening);
+        document.body.classList.toggle('no-scroll', isOpening);
+        mobileMenuToggle.setAttribute('aria-expanded', isOpening);
     });
     
     // Close mobile menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navRight.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('hamburger-active');
-                navRight.classList.remove('active');
-                document.body.classList.remove('no-scroll');
+                closeMobileMenu();
             }
         });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navRight.classList.contains('active')) {
+            closeMobileMenu();
+            mobileMenuToggle.focus();
+        }
     });
     
     // Read more / Read less toggle for intro
@@ -54,11 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update current year and last updated date in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    const lastUpdatedElement = document.getElementById('last-updated-date');
-    if (lastUpdatedElement) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        lastUpdatedElement.textContent = new Date().toLocaleDateString('en-US', options);
-    }
 });
 
 // =============================
@@ -282,6 +294,15 @@ document.addEventListener('DOMContentLoaded', () => {
             'Software Engineer',
             'Hackathon Winner'
         ];
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            typedTextElement.textContent = texts[0];
+            const cursor = document.querySelector('.cursor');
+            if (cursor) {
+                cursor.style.display = 'none';
+            }
+            return;
+        }
         
         setTimeout(() => {
             new TypingAnimation(typedTextElement, texts, 80, 40, 2500);

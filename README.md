@@ -1,39 +1,23 @@
-# Portfolio Website
+# Sidhartha Reddy Potu Portfolio
 
-A clean, responsive portfolio website template built with HTML, CSS, and JavaScript.
+Static portfolio site for ML engineering, computer vision, and software engineering work.
 
 ## Features
-- Single page design with smooth scrolling navigation
-- About, Projects, and Experience sections
-- Dark/light theme toggle with automatic preference detection
-- Responsive design for all device sizes
-- Social media links and resume download
-- Placeholder content that's easy to customize
+- Single-page portfolio with About, Experience, Projects, and Education sections
+- Social links for LinkedIn, GitHub, resume, and email
+- Project cards with GitHub, report, and slide links where available
+- Dark/light theme toggle with saved preference
+- Responsive layout and reduced-motion support
+- SEO metadata, structured data, sitemap, and robots configuration
 
-## Setup Instructions
-1. Clone this repository or download the files
-2. Replace placeholder content with your own:
-   - Update your name and personal information in `index.html`
-   - Add your own projects and experience
-   - Replace `images/sid.jpeg` with your profile photo (maintaining the same filename)
-   - Replace `resume.pdf` with your actual resume
-   - Update social media links to point to your profiles
+## Local Preview
+Open `index.html` directly in a browser, or serve the directory with any static file server.
 
-## GitHub Pages Deployment
-1. Create a new repository on GitHub
-2. Push this code to the repository
-3. Go to repository Settings > Pages
-4. Under "Source", select "main" branch
-5. Click Save
-6. Your site will be published at `https://<username>.github.io/<repository-name>/`
+## Deployment
+The site is designed for GitHub Pages and does not require a backend, database, paid hosting, or cloud infrastructure.
 
-## Customization
-- Change color scheme by modifying the CSS variables in `styles.css`
-- Add additional sections as needed
-- Customize animations and transitions
-
-## Technologies Used
+## Technologies
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- Vanilla JavaScript
 - Font Awesome Icons

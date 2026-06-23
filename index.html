@@ -7,7 +7,7 @@
     <!-- Primary Meta Tags -->
     <title>Sidhartha Reddy Potu | ML Engineer & Software Engineer</title>
     <meta name="title" content="Sidhartha Reddy Potu | ML Engineer & Software Engineer">
-    <meta name="description" content="MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, Reinforcement Learning, and Software Engineering. Actively seeking full-time opportunities.">
+    <meta name="description" content="Partner Engineer, Generative AI at Meta. MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, Reinforcement Learning, and Software Engineering.">
     <meta name="keywords" content="Computer Vision, Machine Learning, AI Research, Deep Learning, Reinforcement Learning, RLHF, GRPO, LLM, Large Language Models, Vision Transformers, DINOv2, NYU, CILVR, Python, Go, PyTorch, Hugging Face, TRL, vLLM, Kubernetes, Docker, AWS, GCP, Redis, PostgreSQL, Distributed Systems, Software Engineering, MLE, ML Engineer">
     <meta name="author" content="Sidhartha Reddy Potu">
     <meta name="robots" content="index, follow">
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sid-rp.github.io/">
     <meta property="og:title" content="Sidhartha Reddy Potu | ML Engineer & Software Engineer">
-    <meta property="og:description" content="MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, Reinforcement Learning, and Software Engineering. Actively seeking full-time opportunities.">
+    <meta property="og:description" content="Partner Engineer, Generative AI at Meta. MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, Reinforcement Learning, and Software Engineering.">
     <meta property="og:image" content="https://sid-rp.github.io/images/sid-800.jpg">
     <meta property="og:site_name" content="Sidhartha Reddy Potu Portfolio">
     
@@ -24,12 +24,12 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sid-rp.github.io/">
     <meta property="twitter:title" content="Sidhartha Reddy Potu | ML Engineer & Software Engineer">
-    <meta property="twitter:description" content="MS in Computer Science from NYU. Hackathon winner. Actively seeking full-time opportunities in ML, Computer Vision, and Software Engineering.">
+    <meta property="twitter:description" content="Partner Engineer, Generative AI at Meta. MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, and Software Engineering.">
     <meta property="twitter:image" content="https://sid-rp.github.io/images/sid-800.jpg">
     
     <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3b82f6">
-    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
     <link rel="canonical" href="https://sid-rp.github.io/">
     
     <!-- Favicon -->
@@ -88,23 +88,23 @@
         <div class="container">
             <nav>
                 <div class="logo">Sid</div>
-                <button id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-controls="primary-navigation" aria-expanded="false">
                     <span class="hamburger-icon">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
                     </span>
                 </button>
-                <div class="nav-right">
+                <div class="nav-right" id="primary-navigation">
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#education">Education</a></li>
                     </ul>
-                    <button id="theme-toggle" aria-label="Toggle dark/light mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode" aria-pressed="false">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                        <i class="fas fa-sun" aria-hidden="true"></i>
                     </button>
                 </div>
             </nav>
@@ -152,7 +152,7 @@
                           I hold an MS in Computer Science from
                           <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">NYU</a>
                           with a strong background in ML, Computer Vision, and Software Engineering.
-                          <strong>I am actively seeking full-time opportunities.</strong>
+                          <strong>I am currently a Partner Engineer, Generative AI at Meta.</strong>
                           Most recently, I <strong>won first place</strong> at the
                           <a href="#kube-sre-gym">OpenEnv Hackathon</a>
                           in SF, where my team built an RL environment that teaches a small LLM to diagnose and fix real Kubernetes incidents from scratch.
@@ -195,6 +195,30 @@
                 <div class="timeline-container">
                     <div class="timeline-line"></div>
                     <div class="experience-timeline">
+                        <!-- Experience: Meta -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                        <h3>Partner Engineer, Generative AI</h3>
+                        <p class="experience-subtitle">Meta · Menlo Park, CA, USA</p>
+                        <p class="experience-date">June 2026 - Present</p>
+                            </div>
+                        </div>
+
+                        <!-- Experience: Centific -->
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                        <h3>Applied Reinforcement Learning Engineer</h3>
+                        <p class="experience-subtitle">Centific · Remote</p>
+                        <p class="experience-date">April 2026 - June 2026</p>
+                        <ul>
+                            <li>Worked independently with one teammate to develop Kube SRE Gym into a research paper</li>
+                            <li>Contributed to an early-stage RL environments project for enterprise agentic workflows</li>
+                        </ul>
+                            </div>
+                        </div>
+
                         <!-- Experience 1 -->
                         <div class="timeline-item" data-aos="fade-up">
                             <div class="timeline-dot"></div>
@@ -327,8 +351,8 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/sid-rp/ego_point_trackig" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/presentation.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Presentation</a>
-                            <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/DS_GA_3001_Course_Project_final_report.pdf" target="_blank" rel="noopener noreferrer" class="report-link">Report</a>
+                            <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/DS_GA_3001_Course_Project_final_report.pdf" target="_blank" rel="noopener noreferrer" class="report-link">Course Report</a>
+                            <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/presentation.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Slides</a>
                         </div>
                     </div>
                     
@@ -344,8 +368,8 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/sid-rp/medllama" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://github.com/sid-rp/medllama/blob/main/Team_11_Dec_5.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Presentation</a>
-                            <a href="https://github.com/sid-rp/medllama/blob/main/DS_GA_1011_final_report.pdf" target="_blank" rel="noopener noreferrer" class="report-link">Report</a>
+                            <a href="https://github.com/sid-rp/medllama/blob/main/DS_GA_1011_final_report.pdf" target="_blank" rel="noopener noreferrer" class="report-link">Final Report</a>
+                            <a href="https://github.com/sid-rp/medllama/blob/main/Team_11_Dec_5.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Slides</a>
                         </div>
                     </div>
                     
@@ -419,7 +443,7 @@
         <div class="container">
             <div class="footer-content">
                 <p>&copy; <span id="current-year">2026</span> Sidhartha Reddy Potu. All rights reserved.</p>
-                <p class="last-updated">Last updated: <span id="last-updated-date"></span></p>
+                <p class="last-updated">Last updated: <span id="last-updated-date">June 13, 2026</span></p>
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer">GitHub</a>
