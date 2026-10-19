@@ -34,4 +34,4 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
-Sitemap: https://sid-rp.github.io/sitemap.xml
+Sitemap: https://sidrp.ai/sitemap.xml
