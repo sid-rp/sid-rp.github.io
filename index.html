@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Sidhartha Reddy Potu | ML Engineer & Software Engineer</title>
     <meta name="title" content="Sidhartha Reddy Potu | ML Engineer & Software Engineer">
@@ -11,7 +11,7 @@
     <meta name="keywords" content="Computer Vision, Machine Learning, AI Research, Deep Learning, Reinforcement Learning, RLHF, GRPO, LLM, Large Language Models, Vision Transformers, DINOv2, NYU, CILVR, Python, Go, PyTorch, Hugging Face, TRL, vLLM, Kubernetes, Docker, AWS, GCP, Redis, PostgreSQL, Distributed Systems, Software Engineering, MLE, ML Engineer">
     <meta name="author" content="Sidhartha Reddy Potu">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sidrp.ai/">
@@ -19,7 +19,7 @@
     <meta property="og:description" content="Partner Engineer, Generative AI at Meta. MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, Reinforcement Learning, and Software Engineering.">
     <meta property="og:image" content="https://sidrp.ai/images/sid-800.jpg">
     <meta property="og:site_name" content="Sidhartha Reddy Potu Portfolio">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sidrp.ai/">
@@ -27,33 +27,37 @@
     <meta property="twitter:description" content="Partner Engineer, Generative AI at Meta. MS in Computer Science from NYU. Hackathon winner. Experience in ML, Computer Vision, and Software Engineering.">
     <meta property="twitter:image" content="https://sidrp.ai/images/sid-800.jpg">
     <meta name="twitter:creator" content="@sidhartharp">
-    
+
     <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="theme-color" content="#0F6E6E">
+    <meta name="msapplication-TileColor" content="#0F6E6E">
     <link rel="canonical" href="https://sidrp.ai/">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👨‍💻</text></svg>">
-    
+
     <!-- Resource Hints -->
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+    <noscript><style>#theme-toggle { display: none; }</style></noscript>
+
+    <!-- Applied before first paint so dark mode doesn't flash -->
+    <script>
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            if (saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
     <script src="script.js" defer></script>
-    
+
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -90,397 +94,155 @@
     }
     </script>
 </head>
-<body class="light-theme">
+<body>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Sid</div>
-                <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-controls="primary-navigation" aria-expanded="false">
-                    <span class="hamburger-icon">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </span>
-                </button>
-                <div class="nav-right" id="primary-navigation">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#education">Education</a></li>
-                    </ul>
-                    <button id="theme-toggle" aria-label="Toggle dark/light mode" aria-pressed="false">
-                        <i class="fas fa-moon" aria-hidden="true"></i>
-                        <i class="fas fa-sun" aria-hidden="true"></i>
-                    </button>
-                </div>
+    <div class="page">
+        <header>
+            <nav aria-label="Primary">
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="SidharthaReddyPotu_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <button id="theme-toggle" type="button">Dark mode</button>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main id="main-content">
-        <section id="about" class="section hero-section">
-            <div class="container">
-                <!-- About heading removed as requested -->
-                <div class="profile-container">
-                    <div class="profile-column">
-                        <div class="profile-image">
-                            <img src="images/sid-400.jpg"
-                                 srcset="images/sid-200.jpg 200w,
-                                         images/sid-400.jpg 400w,
-                                         images/sid-800.jpg 800w"
-                                 sizes="(max-width: 768px) 200px, 400px"
-                                 alt="Sidhartha Reddy Potu"
-                                 fetchpriority="high"
-                                 decoding="async">
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://x.com/sidhartharp" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-link">
-                                <i class="fab fa-x-twitter"></i>
-                            </a>
-                            <a href="https://scholar.google.com/citations?user=P4D5o6YAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" class="social-link">
-                                <i class="fas fa-graduation-cap"></i>
-                            </a>
-                            <a href="SidharthaReddyPotu_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" class="social-link">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
-                            <a href="mailto:sp7835@nyu.edu" aria-label="Email" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="profile-content">
-                        <h1 class="name-heading">Sidhartha Reddy Potu</h1>
-                        <div class="typing-container">
-                            <span class="typed-text"></span>
-                            <span class="cursor"></span>
-                        </div>
-                        <p class="summary">
-                          I hold an MS in Computer Science from
-                          <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">NYU</a>
-                          with a strong background in ML, Computer Vision, and Software Engineering.
-                          <strong>I am currently a Partner Engineer, Generative AI at Meta,</strong>
-                          where I contributed to open-sourcing
-                          <a href="https://dev.meta.ai/resources/blog/build-with-muse-spark-open" target="_blank" rel="noopener">Muse Spark</a>
-                          and
-                          <a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">Muse Glimmer</a>.
-                          Earlier this year, I <strong>won first place</strong> at the
-                          <a href="#kube-sre-gym">OpenEnv Hackathon</a>
-                          in SF, where my team built an RL environment that teaches a small LLM to diagnose and fix real Kubernetes incidents from scratch.
+        <main id="main-content">
+            <section id="about" class="intro">
+                <h1>Sidhartha Reddy Potu</h1>
+                <div class="ledger-row">
+                    <img class="portrait"
+                         src="images/sid-400.jpg"
+                         srcset="images/sid-200.jpg 200w,
+                                 images/sid-400.jpg 400w,
+                                 images/sid-800.jpg 800w"
+                         sizes="(max-width: 860px) 160px, 240px"
+                         width="240"
+                         height="240"
+                         alt="Sidhartha Reddy Potu"
+                         fetchpriority="high"
+                         decoding="async">
+                    <div class="ledger-body">
+                        <p class="lede">
+                            I help release Meta’s open models, including
+                            <a href="https://dev.meta.ai/resources/blog/build-with-muse-spark-open" target="_blank" rel="noopener">Muse Spark</a>
+                            and
+                            <a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">Muse Glimmer</a>.
                         </p>
-
-                        <div class="intro-expandable">
-                          <button class="read-more-btn" type="button" aria-expanded="false" aria-controls="intro-details">Read more</button>
-                          <div class="intro-details" id="intro-details">
-                            <p class="summary">
-                              I previously worked as a Software Engineering Intern at Granica AI and as a Graduate Student Researcher at NYU’s
-                              <a href="https://wp.nyu.edu/cilvr/" target="_blank" rel="noopener">CILVR lab</a>
-                              under
-                              <a href="https://cs.nyu.edu/~fouhey/" target="_blank" rel="noopener">Prof. David Fouhey</a>,
-                              focusing on 3D computer vision. I also served as a Course Assistant for advanced graduate courses including
-                              <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank" rel="noopener">Learning with Large Language and Vision Models</a>
-                              under
-                              <a href="https://www.sainingxie.com/" target="_blank" rel="noopener">Prof. Saining Xie</a>,
-                              Deep Learning, and Advanced Topics in Computer Vision.
-                            </p>
-
-                            <p class="summary">
-                              I completed my Bachelor of Technology in Electrical Engineering with a minor in Astronomy at the
-                              <a href="https://www.iiti.ac.in/" target="_blank" rel="noopener">Indian Institute of Technology (IIT), Indore</a>.
-                            </p>
-
-                            <p class="summary">
-                              In my free time, I enjoy reading both fiction and non-fiction, watching movies, and photography.
-                              Feel free to reach out if you’d like to chat!
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section reveal-section">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="timeline-container">
-                    <div class="timeline-line"></div>
-                    <div class="experience-timeline">
-                        <!-- Experience: Meta -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                        <h3>Partner Engineer, Generative AI</h3>
-                        <p class="experience-subtitle"><a href="https://dev.meta.ai/" target="_blank" rel="noopener noreferrer">Meta</a> · Menlo Park, CA, USA</p>
-                        <p class="experience-date">June 2026 - Present</p>
-                        <ul>
-                            <li>Contributed to the open-sourcing of Muse Spark and Muse Glimmer, including Muse Spark Open (<a href="https://dev.meta.ai/docs/muse-spark-open" target="_blank" rel="noopener noreferrer">Docs</a> · <a href="https://dev.meta.ai/resources/blog/build-with-muse-spark-open" target="_blank" rel="noopener noreferrer">Blog</a>), the open-weight release of Muse Spark (816B-parameter Mixture-of-Experts LLM, 1M-token context), and Muse Glimmer (<a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener noreferrer">Blog</a>)</li>
-                            <li>Partnered with the runtime and hosted-inference ecosystem (vLLM, SGLang, Hugging Face, NVIDIA, Baseten, Fireworks AI, and Together AI) to bring Muse models to external platforms</li>
-                            <li>Drove validation and benchmarking for Muse Spark and Muse Glimmer; core contributor to Muse Glimmer 30B (<a href="https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/" target="_blank" rel="noopener noreferrer">Paper</a>)</li>
+                        <p>
+                            Before joining Meta, I won first place with my team at Meta’s <a href="#kube-sre-gym">OpenEnv Hackathon</a> in SF.
+                            We built an RL environment that teaches a small LLM to diagnose and fix real Kubernetes incidents from scratch.
+                        </p>
+                        <p>
+                            I hold an MS in Computer Science from <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">NYU</a>,
+                            where I researched 3D computer vision under <a href="https://cs.nyu.edu/~fouhey/" target="_blank" rel="noopener noreferrer">Prof. David Fouhey</a>
+                            and was a course assistant for <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank" rel="noopener noreferrer">Learning with Large Language and Vision Models</a>,
+                            a graduate course taught by <a href="https://www.sainingxie.com/" target="_blank" rel="noopener noreferrer">Prof. Saining Xie</a>.
+                        </p>
+                        <p>
+                            In my free time, I enjoy reading fiction and non-fiction, watching movies, and photography.
+                            Feel free to reach out if you’d like to chat.
+                        </p>
+                        <ul class="contact-links">
+                            <li><a href="mailto:sp7835@nyu.edu">Email</a></li>
+                            <li><a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://x.com/sidhartharp" target="_blank" rel="noopener noreferrer">X</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=P4D5o6YAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
                         </ul>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <!-- Experience: Centific -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
+            <section id="experience">
+                <h2>Experience</h2>
+
+                <article class="ledger-row">
+                    <p class="ledger-date">June 2026 – present</p>
+                    <div class="ledger-body">
+                        <h3>Partner Engineer, Generative AI</h3>
+                        <p class="ledger-place"><a href="https://dev.meta.ai/" target="_blank" rel="noopener noreferrer">Meta</a>, Menlo Park, CA</p>
+                        <ul>
+                            <li>Helped release Muse Spark Open (<a href="https://dev.meta.ai/docs/muse-spark-open" target="_blank" rel="noopener noreferrer">docs</a>, <a href="https://dev.meta.ai/resources/blog/build-with-muse-spark-open" target="_blank" rel="noopener noreferrer">blog</a>), the open-weight version of Muse Spark, and Muse Glimmer (<a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener noreferrer">blog</a>)</li>
+                            <li>Worked with vLLM, SGLang, Hugging Face, NVIDIA, Baseten, Fireworks AI, and Together AI to bring Muse models to their platforms</li>
+                            <li>Core contributor to Muse Glimmer 30B (<a href="https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/" target="_blank" rel="noopener noreferrer">paper</a>)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="ledger-row">
+                    <p class="ledger-date">April – June 2026</p>
+                    <div class="ledger-body">
                         <h3>Applied Reinforcement Learning Engineer</h3>
-                        <p class="experience-subtitle">Centific · Remote</p>
-                        <p class="experience-date">April 2026 - June 2026</p>
+                        <p class="ledger-place">Centific, remote</p>
                         <ul>
                             <li>Worked independently with one teammate to develop Kube SRE Gym into a research paper</li>
                             <li>Contributed to an early-stage RL environments project for enterprise agentic workflows</li>
                         </ul>
-                            </div>
-                        </div>
+                    </div>
+                </article>
 
-                        <!-- Experience 1 -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
+                <article id="kube-sre-gym" class="ledger-row">
+                    <p class="ledger-date">2026</p>
+                    <div class="ledger-body">
+                        <h3>Kube SRE Gym</h3>
+                        <p class="ledger-place">First place out of 100+ teams, <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener noreferrer">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley)</p>
+                        <p>An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer targets tracked weaknesses, and an LLM judge scores SRE workflow quality across expert personas.</p>
+                        <p>We post-trained Qwen-series models with GRPO via TRL and vLLM. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone. <a href="https://github.com/sid-rp/kube-sre-gym" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>.</p>
+                    </div>
+                </article>
+
+                <article class="ledger-row">
+                    <p class="ledger-date">September 2025 – March 2026</p>
+                    <div class="ledger-body">
                         <h3>Software Engineering Intern</h3>
-                        <p class="experience-subtitle">Granica AI · Mountain View, CA, USA</p>
-                        <p class="experience-date">September 2025 - March 2026</p>
+                        <p class="ledger-place">Granica AI, Mountain View, CA</p>
                         <ul>
-                            <li>Built a dual-lane FIFO load balancer for a <strong>400+</strong> node K8s cluster, doubling throughput (<strong>10</strong> to <strong>20+</strong> req/worker)</li>
-                            <li>Eliminated runaway K8s API calls at <strong>20k</strong> concurrency by caching scaler state in Go</li>
-                            <li>Resolved lock contention and races in load-balancer goroutines, improving CPU utilization from <strong>87%</strong> to <strong>97%</strong></li>
+                            <li>Built a dual-lane FIFO load balancer for a 400+ node Kubernetes cluster, doubling throughput (10 to 20+ req/worker)</li>
+                            <li>Eliminated runaway Kubernetes API calls at 20k concurrency by caching scaler state in Go</li>
+                            <li>Resolved lock contention and races in load-balancer goroutines, improving CPU utilization from 87% to 97%</li>
                             <li>Designed local scale-validation and integration test suites for the load-balancer and worker routing logic</li>
                             <li>Built a benchmark suite to validate performance and correctness as a release gate for a new product line</li>
                         </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Experience 2 -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                        <h3>MTS Intern</h3>
-                        <p class="experience-subtitle">Neopolis AI · Mountain View, CA, USA</p>
-                        <p class="experience-date">August 2025 – September 2025</p>
-                        <ul>
-                            <li>Refined LiveKit-based LLM voice AI Agent prompts to improve instruction-following and downstream tool inputs</li>
-                            <li>Used Langfuse observability to inspect agent outputs and guide prompt iteration</li>
-                            <li>Introduced session inactivity timeouts to prevent idle conversations and strengthen reliability</li>
-                        </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Experience 3 -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                        <h3>Graduate Student Researcher, CILVR, NYU</h3>
-                        <p class="experience-subtitle">3D Computer Vision under Prof. David Fouhey · New York, NY, USA</p>
-                        <p class="experience-date">January 2024 - May 2025</p>
-                        <ul>
-                            <li>Combined HaMeR transformer poses with COLMAP SfM to recover global 3D hand trajectories on Epic-Kitchens and EgoExo4D</li>
-                            <li>Optimized hand-motion trajectories using temporal smoothing with velocity and jerk regularization</li>
-                            <li>Recovered full-perspective 3D from weak-perspective predictions using SfM intrinsics and frame transforms</li>
-                            <li>Fine-tuned DINOv2 ViT-L/ViT-B and EfficientNet-V2 for hand-object contact classification on Hands23, ablating losses (Weighted/Balanced CE, Focal); best model reached <strong>0.97</strong> in-domain and <strong>0.96</strong> cross-dataset ROC AUC on Epic-Kitchens</li>
-                            <li>Evaluated Depth Anything and Metric3D as auxiliary depth signals for the hand-object contact task</li>
-                            <li>Developed visualization workflows with Rerun Viewer and scaled multi-GPU experiments on NYU HPC using SLURM</li>
-                        </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Experience 4 -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                        <h3>Course Assistant, NYU</h3>
-                        <p class="experience-subtitle">Computer Vision, Deep Learning, LLVM courses · New York, NY, USA</p>
-                        <p class="experience-date">September 2024 - May 2025</p>
-                        <ul>
-                            <li>Mentored <strong>450+</strong> students through office hours, grading, and project advising across 3 courses</li>
-                            <li>Assisted DL (<a href="https://chinmayhegde.github.io/" target="_blank" rel="noopener noreferrer">Prof. Chinmay Hegde</a>), <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank" rel="noopener noreferrer">LLVM</a> (<a href="https://www.sainingxie.com/" target="_blank" rel="noopener noreferrer">Prof. Saining Xie</a>), and Advanced CV (<a href="https://cs.nyu.edu/~fouhey/" target="_blank" rel="noopener noreferrer">Prof. David Fouhey</a>)</li>
-                        </ul>
-                            </div>
-                        </div>
+                    </div>
+                </article>
 
-                        <!-- Experience 5 -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                        <h3>B.Tech Thesis, PRIA Lab, IIT Indore</h3>
-                        <p class="experience-subtitle">Multimodal Crowd Counting using Vision Transformers · Indore, MP, India</p>
-                        <p class="experience-date">June 2022 - December 2022</p>
-                        <ul>
-                            <li>Trained a ViT-based model in a weakly supervised setting, achieving MAE 15.78 and MSE 30.70</li>
-                            <li>Designed a Pyramid Vision Transformer (PVT v2) model, achieving MAE 19.22 and MSE 32.94</li>
-                            <li>Ranked in the <strong>top 10 of 250+</strong> B.Tech theses; nominated for Best Thesis award at IIT Indore</li>
-                        </ul>
-                            </div>
-                        </div>
-                        <!-- Experience 6 -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                        <h3>Research Assistant, NLP Lab, IIT Indore</h3>
-                        <p class="experience-subtitle">Multi-Modal Hashtag Recommendation · Indore, MP, India</p>
-                        <p class="experience-date">October 2021 - April 2022</p>
-                        <ul>
-                            <li>Modeled hashtag generation for micro-videos using LSTMs with self-, co-, and hierarchical attention</li>
-                            <li>Enhanced feature fusion with BERT, Word2Vec, ResNet152, InceptionV3, VGG16, MFCCs, and spectrograms</li>
-                        </ul>
-                            </div>
-                        </div>
+                <article class="ledger-row">
+                    <p class="ledger-date">January 2024 – May 2025</p>
+                    <div class="ledger-body">
+                        <h3>Graduate Student Researcher and Course Assistant</h3>
+                        <p class="ledger-place">NYU, New York, NY</p>
+                        <p>Researched 3D computer vision in the <a href="https://wp.nyu.edu/cilvr/" target="_blank" rel="noopener">CILVR lab</a> under <a href="https://cs.nyu.edu/~fouhey/" target="_blank" rel="noopener noreferrer">Prof. David Fouhey</a>, and assisted three graduate courses: <a href="https://www.sainingxie.com/llvm-sp25/" target="_blank" rel="noopener noreferrer">Learning with Large Language and Vision Models</a> (<a href="https://www.sainingxie.com/" target="_blank" rel="noopener noreferrer">Prof. Saining Xie</a>), Deep Learning (<a href="https://chinmayhegde.github.io/" target="_blank" rel="noopener noreferrer">Prof. Chinmay Hegde</a>), and Advanced Topics in Computer Vision (Prof. Fouhey).</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </article>
 
-        <section id="projects" class="section reveal-section">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <!-- Kube SRE Gym - Hackathon Winner -->
-                    <div id="kube-sre-gym" class="project-card featured-project reveal-item">
-                        <span class="winner-badge"><i class="fas fa-trophy"></i> Hackathon Winner</span>
-                        <h3>Kube SRE Gym</h3>
-                        <p>Awarded <strong>1st place</strong> out of <strong>100+</strong> teams at the <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener">OpenEnv Hackathon</a> (PyTorch, Cerebral Valley; <strong>$100K+</strong> prize pool).</p>
-                        <p>An RL environment where a small language model diagnoses and fixes live Kubernetes incidents on GKE via kubectl, with zero hardcoded knowledge of the cluster. An adversarial incident designer creates targeted scenarios based on tracked weaknesses, with curriculum control and an LLM judge scoring SRE workflow quality across expert personas.</p>
-                        <p>Post-trained Qwen-series models with GRPO via TRL + vLLM on H100, using OpenEnv and Hugging Face Spaces. The agent learned to discover cluster topology, identify faults, and apply correct fixes from reward signal alone.</p>
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">Reinforcement Learning</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">GRPO</span>
-                            <span class="tech-tag">vLLM</span>
-                            <span class="tech-tag">GKE</span>
-                            <span class="tech-tag">Claude API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/sid-rp/kube-sre-gym" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://cerebralvalley.ai/e/openenv-hackathon-sf/hackathon/gallery" target="_blank" rel="noopener noreferrer" class="hackathon-link">Hackathon</a>
-                        </div>
-                    </div>
+                <p class="ledger-note">Earlier projects are on <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+            </section>
 
-                    <!-- Point Tracking Project -->
-                    <div class="project-card reveal-item">
-                        <h3>Point Tracking in Egocentric Videos</h3>
-                        <p>Course project under <a href="https://mengyeren.com/" target="_blank" rel="noopener">Prof. Mengye Ren</a> for the <a href="https://elvcourse.org/2025/" target="_blank" rel="noopener">Embodied Learning and Vision</a> course at NYU. Evaluated self-supervised vision backbones (DINOv2, CroCoV2) zero-shot for egocentric point tracking on EgoPoints, then self-supervised fine-tuned both backbones with a lightweight delta network predicting per-frame keypoint displacement. Compared tracking accuracy across 8, 16, and 24 pixel thresholds.</p>
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">DINOv2</span>
-                            <span class="tech-tag">Computer Vision</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/sid-rp/ego_point_trackig" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/DS_GA_3001_Course_Project_final_report.pdf" target="_blank" rel="noopener noreferrer" class="report-link">Course Report</a>
-                            <a href="https://github.com/sid-rp/ego_point_trackig/blob/main/presentation.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Slides</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Medical QA Models Project -->
-                    <div class="project-card reveal-item">
-                        <h3>Fine-Tuning Medical QA Models</h3>
-                        <p>Fine-tuned Meta LLaMA 3.2 3B for medical question answering using LoRA, QLoRA, and GaLore. Compared parameter-efficient methods head-to-head on USMLE Steps 1-3 and MedQuAD. Best USMLE accuracies: Step 1 <strong>42%</strong> (GaLore), Step 2 <strong>38%</strong> (QLoRA), Step 3 <strong>45%</strong> (GaLore); boosted MedQuAD F1 to <strong>70%</strong> on open-domain medical QA &mdash; showing that efficient fine-tuning can meaningfully improve domain-specific performance on a 3B model.</p>
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">LLaMA</span>
-                            <span class="tech-tag">LoRA / QLoRA</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Hugging Face</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/sid-rp/medllama" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://github.com/sid-rp/medllama/blob/main/DS_GA_1011_final_report.pdf" target="_blank" rel="noopener noreferrer" class="report-link">Final Report</a>
-                            <a href="https://github.com/sid-rp/medllama/blob/main/Team_11_Dec_5.pdf" target="_blank" rel="noopener noreferrer" class="presentation-link">Slides</a>
-                        </div>
-                    </div>
-                    
-                    <!-- VioletPass Project -->
-                    <div class="project-card reveal-item">
-                        <h3>VioletPass: Ticket Booking Platform</h3>
-                        <p>Architected a scalable ticket-booking platform on AWS that prevents double booking using Redis distributed locks. Configured Redis TTL-based seat reservations with PostgreSQL finalization for transactional integrity, plus QR-code verification for secure and efficient event check-ins.</p>
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Stuti-mishra/VioletPass" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                    
-                    <!-- AnimeVerse Project -->
-                    <div class="project-card reveal-item">
-                        <h3>AnimeVerse: Recommendation System</h3>
-                        <p>A personalized anime recommendation system that processes <strong>300k</strong> user-anime interactions with PySpark. Compared collaborative filtering (ALS), content-based (TF-IDF), and semantic search (ChromaDB) approaches to surface relevant recommendations.</p>
-                        <div class="project-tech-tags">
-                            <span class="tech-tag">PySpark</span>
-                            <span class="tech-tag">ChromaDB</span>
-                            <span class="tech-tag">TF-IDF</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/sid-rp/AnimeVerse" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section reveal-section">
-            <div class="container">
+            <section id="education">
                 <h2>Education</h2>
-                <div class="education-grid">
-                    <!-- NYU Education -->
-                    <div class="education-item reveal-item">
-                        <div class="education-logo">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="education-content">
-                            <h3>New York University</h3>
-                            <p class="education-subtitle">Master of Science in Computer Science; GPA: 3.83/4</p>
-                            <p class="education-date">2023 - 2025</p>
-                            <p>Course Work: Machine Learning, Operating Systems, Computer Vision, AI, Natural Language Processing with Representation Learning, Embodied Learning and Vision, Cloud Computing, Big Data.</p>
-                        </div>
+
+                <article class="ledger-row">
+                    <p class="ledger-date">2023 – 2025</p>
+                    <div class="ledger-body">
+                        <h3><a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">New York University</a></h3>
+                        <p class="ledger-place">Master of Science in Computer Science; GPA: 3.83/4</p>
                     </div>
+                </article>
 
-                    <!-- IIT Education -->
-                    <div class="education-item reveal-item">
-                        <div class="education-logo">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <div class="education-content">
-                            <h3>Indian Institute of Technology (IIT), Indore</h3>
-                            <p class="education-subtitle">Bachelor of Technology in Electrical Engineering, Minor in Astronomy; GPA: 8.49/10</p>
-                            <p class="education-date">2019 - 2023</p>
-                        </div>
+                <article class="ledger-row">
+                    <p class="ledger-date">2019 – 2023</p>
+                    <div class="ledger-body">
+                        <h3><a href="https://www.iiti.ac.in/" target="_blank" rel="noopener">Indian Institute of Technology (IIT), Indore</a></h3>
+                        <p class="ledger-place">Bachelor of Technology in Electrical Engineering, minor in Astronomy; GPA: 8.49/10</p>
                     </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                </article>
+            </section>
+        </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; <span id="current-year">2026</span> Sidhartha Reddy Potu. All rights reserved.</p>
-                <p class="last-updated">Last updated: <span id="last-updated-date">October 23, 2026</span></p>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/sid-rp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://github.com/sid-rp" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://x.com/sidhartharp" target="_blank" rel="noopener noreferrer">X</a>
-                    <a href="https://scholar.google.com/citations?user=P4D5o6YAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
-                    <a href="mailto:sp7835@nyu.edu">Email</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+        <footer>
+            <p>&copy; <span id="current-year">2026</span> Sidhartha Reddy Potu</p>
+            <p>Last updated November 3, 2026</p>
+        </footer>
+    </div>
 </body>
 </html>

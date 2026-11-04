@@ -3,9 +3,8 @@
 Static portfolio site for ML engineering, computer vision, and software engineering work.
 
 ## Features
-- Single-page portfolio with About, Experience, Projects, and Education sections
-- Social links for LinkedIn, GitHub, resume, and email
-- Project cards with GitHub, report, and slide links where available
+- Single-page portfolio with About, Experience, and Education sections
+- Links for email, LinkedIn, GitHub, X, Google Scholar, and resume
 - Dark/light theme toggle with saved preference
 - Responsive layout and reduced-motion support
 - SEO metadata, structured data, sitemap, and robots configuration
@@ -20,4 +19,4 @@ The site is designed for GitHub Pages and does not require a backend, database, 
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- Font Awesome Icons
+- Google Fonts (Schibsted Grotesk, Source Serif 4)
